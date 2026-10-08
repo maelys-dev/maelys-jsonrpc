@@ -1,0 +1,18 @@
+{
+  "bom": 4,
+  "codexmanager_duplicate_last_wins": true,
+  "duplicate_key": 6,
+  "escaped_duplicate_key": 6,
+  "escaped_u0000": 4,
+  "invalid_utf8": 5,
+  "jansson_version": "2.15.1",
+  "maelys_json_abi": 3,
+  "maelys_json_version": "0.3.0",
+  "mcp_duplicate_rejected": true,
+  "observation_failures": 0,
+  "relay_1_5e3": 0,
+  "relay_large_integer": 8,
+  "writer_c0": 0,
+  "writer_c0_finish": 0,
+  "writer_c0_output": "\"\\n\\u0001\""
+}

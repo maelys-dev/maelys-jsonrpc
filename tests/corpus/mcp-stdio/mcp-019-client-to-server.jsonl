@@ -1,0 +1,5 @@
+{"id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"jsonrpc-corpus","version":"0"}},"jsonrpc":"2.0"}
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+{"id":2,"method":"server/discover","params":{},"jsonrpc":"2.0"}
+{"id":3,"method":"tools/list","params":{},"jsonrpc":"2.0"}
+{"id":4,"method":"tools/call","params":{"name":"proxy.probe","arguments":{"case":19,"text":"synthetic quote\" newline\n é","number":1.5}},"jsonrpc":"2.0"}

@@ -1,0 +1,139 @@
+{
+  "artifacts": [
+    {
+      "archives": [
+        "./usr/local/lib/libmaelys-jsonrpc.a"
+      ],
+      "dependency_abi_guard": 3,
+      "path": "dist/libmaelys-jsonrpc-0.0.0-linux-arm64.tar.gz",
+      "sha256": "1805ae7d1592808493c90d550a1b89c1de88ea44c93dff71ccaff42e24f6a733"
+    },
+    {
+      "archives": [
+        "./usr/local/lib/libmaelys-jsonrpc.a"
+      ],
+      "dependency_abi_guard": 3,
+      "path": "dist/libmaelys-jsonrpc-0.0.0-linux-x86_64.tar.gz",
+      "sha256": "dc9ad357637d6351899e274e7182c2effc927d4022329f70e610f913a1815c87"
+    },
+    {
+      "archives": [
+        "./usr/local/lib/libmaelys-jsonrpc.a"
+      ],
+      "dependency_abi_guard": 3,
+      "path": "dist/libmaelys-jsonrpc-0.0.0-macos-arm64.tar.gz",
+      "sha256": "de6d328659d6bdba003e21d9c23aec50aec184986f5355aecc34a4a5570bba88"
+    }
+  ],
+  "checks": {
+    "abi_guard": {
+      "0.2.0": "rejected",
+      "0.3.0": "accepted"
+    },
+    "admission_tests": 4,
+    "asan_ubsan": "passed",
+    "audit_tests": 7,
+    "cmake_install": "Release/NDEBUG, CMake-config dependency and pkg-config-only dependency; both installed consumers",
+    "corpus_audit": "passed",
+    "fuzz_invariants": "chunk invariance plus parsed output rewritten to the same bytes",
+    "fuzz_smoke": {
+      "linux-arm64": [
+        {
+          "runs": 540058,
+          "seconds": 31
+        },
+        {
+          "runs": 440245,
+          "seconds": 31
+        }
+      ],
+      "linux-x86_64": [
+        {
+          "runs": 43099,
+          "seconds": 31
+        },
+        {
+          "runs": 59758,
+          "seconds": 31
+        }
+      ],
+      "macos-arm64": [
+        {
+          "runs": 656432,
+          "seconds": 31
+        },
+        {
+          "runs": 538277,
+          "seconds": 31
+        }
+      ]
+    },
+    "make_check": [
+      "macos-arm64",
+      "linux-arm64",
+      "linux-x86_64"
+    ],
+    "scenario_8": {
+      "exact_lexemes": [
+        "1.5e3",
+        "1e400",
+        "70-byte fraction"
+      ],
+      "expected_failure": false,
+      "fractional_is_canonical": false,
+      "integer_domain_unchanged": true,
+      "object_begin_except": "passed",
+      "out_of_range_integer_id": "JSON-RPC PROTOCOL with underlying writer RANGE",
+      "public_number_text_70_bytes": "ARGUMENT; writer remains usable",
+      "status": "passed",
+      "two_pass_byte_fixed_point": true
+    },
+    "socle_check": true
+  },
+  "corpus": {
+    "codex_declined_approvals": 1,
+    "counts": {
+      "codex-app-server": 52,
+      "gemini-acp": 20,
+      "mcp-stdio": 51
+    },
+    "differential_failures": [],
+    "differential_lines": 742,
+    "gemini": "executable fixtures; CLI absent",
+    "named_exceptions": 1,
+    "streams": 123
+  },
+  "coverage": {
+    "branches_percent": 70.73,
+    "functions_percent": 100.0,
+    "lines_percent": 95.94
+  },
+  "date": "2026-10-08T13:42:31.813643+00:00",
+  "dependency": {
+    "abi": 3,
+    "commit": "d106890b02b3fbfd599ecd22bdeffb600db66123",
+    "product": "maelys-json",
+    "tag": "v0.3.0",
+    "tag_commit_matches_pin": true,
+    "tag_type": "annotated"
+  },
+  "integration_findings": [
+    "Codex app-server omits jsonrpc marker; adapter must add 2.0 before strict classify"
+  ],
+  "local_directory": "maelys-jsonrpc",
+  "pending": [
+    "one hour per fuzzer before cut",
+    "shared GitHub CI configured, not run without push",
+    "consumer migrations and release cuts remain later stages"
+  ],
+  "production_source_sha256": "d69eaacd911ecf059c388b18ef6ad9a493eb8f0cb4c9d7f12971c1c019ed9de3",
+  "publication": {
+    "pushed": false,
+    "remote_empty": true,
+    "repository": "https://github.com/maelys-dev/maelys-jsonrpc",
+    "tagged": false,
+    "visibility": "public"
+  },
+  "schema_version": 1,
+  "version": "0.0.0"
+}

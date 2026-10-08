@@ -1,0 +1,4 @@
+{"jsonrpc":"2.0","id":1,"result":{"protocolVersion":1,"authMethods":[{"id":"gemini-api-key","name":"Gemini API key"}],"agentCapabilities":{"loadSession":true}}}
+{"jsonrpc":"2.0","id":2,"result":{"sessionId":"gemini-session-new"}}
+{"jsonrpc":"2.0","id":3,"result":{"sessionId":"gemini-session-new"}}
+{"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}}

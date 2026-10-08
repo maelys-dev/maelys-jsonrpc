@@ -1,0 +1,14 @@
+# Test-only dependencies; the library's only dependency is maelys-json.
+[linux]
+clang
+libclang-rt-dev
+cmake
+pkg-config
+libjansson-dev
+python3
+
+[macos]
+llvm
+cmake
+pkg-config
+jansson
