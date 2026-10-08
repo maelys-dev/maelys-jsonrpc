@@ -28,3 +28,7 @@
   drains entries, while calls_release reports any remaining lost userdata.
 - Number text: the public 64-byte bound does not constrain document copy;
   copy remains bounded by maximum_bytes. Out-of-range integers remain RANGE.
+
+## 0.0.0 — 2026-10-08
+
+- Initial unpublished repository scaffold.
