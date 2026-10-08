@@ -29,7 +29,7 @@ jobs:
       tag: ${{ inputs.tag || github.ref_name }}
       dependency_checkout: |
         sh scripts/checkout-dependencies.sh "$RUNNER_TEMP/dependencies" >>"$GITHUB_ENV"
-      linux_packages: build-essential dpkg-dev file rpm clang libclang-rt-dev cmake pkg-config libjansson-dev
+      linux_packages: build-essential dpkg-dev file rpm clang libclang-rt-dev cmake pkg-config libjansson-dev python3
       macos_packages: llvm cmake pkg-config jansson
 
   tap-libmaelys-jsonrpc:

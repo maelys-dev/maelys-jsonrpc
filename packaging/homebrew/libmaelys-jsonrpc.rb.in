@@ -1,5 +1,6 @@
 # typed: strict
 # frozen_string_literal: true
+
 # SPDX-License-Identifier: MPL-2.0
 
 # Bounded JSON-RPC documents and request correlation on maelys-json.
