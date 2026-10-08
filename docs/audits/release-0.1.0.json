@@ -1,0 +1,75 @@
+{
+  "cut": {
+    "base": "main",
+    "branch": "release/v0.1.0",
+    "changelog": "2026-10-08",
+    "checks": [],
+    "gate": [
+      {
+        "message": "tag.gpgsign = true",
+        "status": "ok"
+      },
+      {
+        "message": "gpg.format = ssh, user.signingkey set",
+        "status": "ok"
+      },
+      {
+        "message": "the signing key is named in allowed-signers, as davidb987654@gmail.com",
+        "status": "ok"
+      },
+      {
+        "message": "no v* tag yet",
+        "status": "note"
+      },
+      {
+        "message": "tag v0.1.0 is free",
+        "status": "ok"
+      },
+      {
+        "message": "environment release of maelys-dev/maelys-jsonrpc limits deployments to tags v*",
+        "status": "ok"
+      },
+      {
+        "message": "environment release of maelys-dev/maelys-jsonrpc requires no reviewer, as [gate] none declares",
+        "status": "ok"
+      },
+      {
+        "message": "maelys-dev/maelys-jsonrpc declares libmaelys-jsonrpc and does not see HOMEBREW_TAP_TOKEN: the tap jobs would render, lint and push nothing, and the release would say so only afterwards. An organisation secret limited to selected repositories has to name this one",
+        "status": "fail"
+      },
+      {
+        "message": "maelys-dev/maelys-jsonrpc does not see HOMEBREW_TAP_SIGNING_KEY: the tap commit would be pushed unsigned",
+        "status": "note"
+      },
+      {
+        "message": "the default branch main of maelys-dev/maelys-jsonrpc is protected by branch protection",
+        "status": "ok"
+      },
+      {
+        "message": "no release of maelys-dev/maelys-jsonrpc has published yet: preflight reads the configuration and builds nothing, so ready means the tag would not be refused, not that a package comes out of it. rehearse is what builds",
+        "status": "note"
+      }
+    ],
+    "mode": "apply",
+    "previousVersion": "0.0.0",
+    "product": "maelys-jsonrpc",
+    "project": "/Users/david/GitHubDocuments/maelys-jsonrpc",
+    "ready": false,
+    "repository": "maelys-dev/maelys-jsonrpc",
+    "socle": {
+      "sha": "8623b3cb8bc432111275170b81eedb63635747d2",
+      "tag": "v0.63.0",
+      "version": "0.63.0"
+    },
+    "stage": "open",
+    "tag": "v0.1.0",
+    "version": "0.1.0"
+  },
+  "cut_exit_code": 2,
+  "date": "2026-10-08T15:57:24.939142+00:00",
+  "schema_version": 1,
+  "signing_private_key_available": false,
+  "signing_probe": "No private key found for authorized public key",
+  "tag_created": false,
+  "version": "0.1.0"
+}

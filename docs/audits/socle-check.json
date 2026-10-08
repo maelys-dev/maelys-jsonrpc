@@ -56,7 +56,7 @@
       },
       {
         "status": "ok",
-        "message": "dependencies/packages: linux [clang libclang-rt-dev cmake pkg-config libjansson-dev] macos [llvm cmake pkg-config jansson]",
+        "message": "dependencies/packages: linux [clang libclang-rt-dev cmake pkg-config libjansson-dev python3] macos [llvm cmake pkg-config jansson]",
         "scope": "conventions"
       },
       {
@@ -68,6 +68,16 @@
         "status": "ok",
         "message": "maelys-release.conf [dependencies] apart: the pins are materialised under $MAELYS_DEPENDENCIES_DIR, never beside the product",
         "scope": "release"
+      },
+      {
+        "status": "note",
+        "message": "Makefile line 8 falls back to ../maelys-json when $MAELYS_DEPENDENCIES_DIR is unset, which is the fallback nobody ever sees taken: it reads whatever is next door, and the working copy of someone who also develops that dependency is what sits there. Refuse instead: MAELYS_JSON_DIR ?= $(if $(MAELYS_DEPENDENCIES_DIR),$(MAELYS_DEPENDENCIES_DIR)/maelys-json,../maelys-json)",
+        "scope": "conventions"
+      },
+      {
+        "status": "note",
+        "message": "Makefile line 9 falls back to ../maelys-release when $MAELYS_DEPENDENCIES_DIR is unset, which is the fallback nobody ever sees taken: it reads whatever is next door, and the working copy of someone who also develops that dependency is what sits there. Refuse instead: MAELYS_RELEASE_DIR ?= $(if $(MAELYS_DEPENDENCIES_DIR),$(MAELYS_DEPENDENCIES_DIR)/maelys-release,../maelys-release)",
+        "scope": "conventions"
       },
       {
         "status": "ok",

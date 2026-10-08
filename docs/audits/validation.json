@@ -6,7 +6,7 @@
       ],
       "dependency_abi_guard": 3,
       "path": "dist/libmaelys-jsonrpc-0.0.0-linux-arm64.tar.gz",
-      "sha256": "1805ae7d1592808493c90d550a1b89c1de88ea44c93dff71ccaff42e24f6a733"
+      "sha256": "6280cdb381a10728c7d665c49c565b8bca1dc522c42d66b997284175d8430ed4"
     },
     {
       "archives": [
@@ -14,7 +14,7 @@
       ],
       "dependency_abi_guard": 3,
       "path": "dist/libmaelys-jsonrpc-0.0.0-linux-x86_64.tar.gz",
-      "sha256": "dc9ad357637d6351899e274e7182c2effc927d4022329f70e610f913a1815c87"
+      "sha256": "190ceeffb4c703a029e007f3211578ac9b3c0f2f5d28233394fa8833abb6d209"
     },
     {
       "archives": [
@@ -33,8 +33,47 @@
     "admission_tests": 4,
     "asan_ubsan": "passed",
     "audit_tests": 7,
+    "candidate_0.1.0": {
+      "make_check": "passed",
+      "package_macos_arm64": "passed",
+      "published": false,
+      "socle_check": "passed"
+    },
     "cmake_install": "Release/NDEBUG, CMake-config dependency and pkg-config-only dependency; both installed consumers",
     "corpus_audit": "passed",
+    "docker_rehearsal": {
+      "image": "ubuntu:26.04",
+      "linux-arm64": "passed",
+      "linux-x86_64": "passed"
+    },
+    "fuzz_hour": {
+      "runs": [
+        {
+          "exit_code": 0,
+          "harness": "lines",
+          "log_sha256": "0afab385f400676e21b36f91b0d9f983d0692cff30672fc3ce61fe678e61847f",
+          "runs": 9164107,
+          "sanitizers": [
+            "address",
+            "undefined"
+          ],
+          "seconds": 3601
+        },
+        {
+          "exit_code": 0,
+          "harness": "calls",
+          "log_sha256": "d93db35137be8a1bc018a162ae537ce52fb1a49546372d5f708fcf88c5a8d0e0",
+          "runs": 19358779,
+          "sanitizers": [
+            "address",
+            "undefined"
+          ],
+          "seconds": 3601
+        }
+      ],
+      "source_commit": "f4d8d027610e045475403baa1d37ae91a23e3367",
+      "target": "macos-arm64"
+    },
     "fuzz_invariants": "chunk invariance plus parsed output rewritten to the same bytes",
     "fuzz_smoke": {
       "linux-arm64": [
@@ -68,6 +107,34 @@
         }
       ]
     },
+    "github_ci": {
+      "commit": "f4d8d027610e045475403baa1d37ae91a23e3367",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "check / sanitizers"
+        },
+        {
+          "conclusion": "success",
+          "name": "check / check (linux)"
+        },
+        {
+          "conclusion": "success",
+          "name": "check / check (linux-arm64)"
+        },
+        {
+          "conclusion": "success",
+          "name": "check / check (macos)"
+        },
+        {
+          "conclusion": "success",
+          "name": "check / fuzz"
+        }
+      ],
+      "url": "https://github.com/maelys-dev/maelys-jsonrpc/actions/runs/37798004045"
+    },
+    "homebrew_formula_style": "passed",
     "make_check": [
       "macos-arm64",
       "linux-arm64",
@@ -108,11 +175,12 @@
     "functions_percent": 100.0,
     "lines_percent": 95.94
   },
-  "date": "2026-10-08T13:42:31.813643+00:00",
+  "date": "2026-10-08T15:57:24.939142+00:00",
   "dependency": {
     "abi": 3,
     "commit": "d106890b02b3fbfd599ecd22bdeffb600db66123",
     "product": "maelys-json",
+    "signature_verified_with_socle_allowed_signers": true,
     "tag": "v0.3.0",
     "tag_commit_matches_pin": true,
     "tag_type": "annotated"
@@ -122,18 +190,22 @@
   ],
   "local_directory": "maelys-jsonrpc",
   "pending": [
-    "one hour per fuzzer before cut",
-    "shared GitHub CI configured, not run without push",
-    "consumer migrations and release cuts remain later stages"
+    "signed cut 0.1.0: authorized private key absent from SSH agent; HOMEBREW_TAP_TOKEN inaccessible to repository",
+    "consumer migrations and the two-published-consumer 1.0.0 gate remain later stages"
   ],
-  "production_source_sha256": "d69eaacd911ecf059c388b18ef6ad9a493eb8f0cb4c9d7f12971c1c019ed9de3",
+  "production_source_sha256": "488ccb90a40a098219d6da062a0f8630cb5f8b0d4ae23a6f7041ebdfd1606f3b",
+  "production_source_sha256_format": "sorted relative path, NUL, contents, NUL",
   "publication": {
-    "pushed": false,
-    "remote_empty": true,
+    "implementation_merge_commit": "f4d8d027610e045475403baa1d37ae91a23e3367",
+    "implementation_pull_request": "https://github.com/maelys-dev/maelys-jsonrpc/pull/1",
+    "pushed": true,
+    "remote_empty": false,
     "repository": "https://github.com/maelys-dev/maelys-jsonrpc",
+    "requested_release": "0.1.0",
     "tagged": false,
     "visibility": "public"
   },
   "schema_version": 1,
+  "validation_scope": "preparation of first release 0.1.0; VERSION remains 0.0.0 until the signed cut",
   "version": "0.0.0"
 }
