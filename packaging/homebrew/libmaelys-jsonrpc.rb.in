@@ -1,6 +1,8 @@
 # typed: strict
 # frozen_string_literal: true
 # SPDX-License-Identifier: MPL-2.0
+
+# Bounded JSON-RPC documents and request correlation on maelys-json.
 class LibmaelysJsonrpc < Formula
   desc "Bounded JSON-RPC 2.0 documents and request correlation for C11"
   homepage "https://github.com/maelys-dev/maelys-jsonrpc"
@@ -15,8 +17,8 @@ class LibmaelysJsonrpc < Formula
   def install
     system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
            "-DMAELYS_JSONRPC_BUILD_TESTS=OFF", "-DMAELYS_JSONRPC_WERROR=ON",
-           "-DMAELYS_JSON_DIR=#{Formula["libmaelys-json"].opt_prefix}",
-           "-DCMAKE_PREFIX_PATH=#{Formula["libmaelys-json"].opt_prefix}"
+           "-DMAELYS_JSON_DIR=#{formula_opt_prefix("libmaelys-json")}",
+           "-DCMAKE_PREFIX_PATH=#{formula_opt_prefix("libmaelys-json")}"
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
@@ -36,9 +38,10 @@ class LibmaelysJsonrpc < Formula
       }
     EOS
     system ENV.cc, "-std=c11", "smoke.c", "-I#{include}",
-           "-I#{Formula["libmaelys-json"].opt_include}", "-L#{lib}", "-lmaelys-jsonrpc",
-           "-L#{Formula["libmaelys-json"].opt_lib}", "-lmaelys-json", "-o", "smoke"
+           "-I#{formula_opt_include("libmaelys-json")}", "-L#{lib}", "-lmaelys-jsonrpc",
+           "-L#{formula_opt_lib("libmaelys-json")}", "-lmaelys-json", "-o", "smoke"
     system "./smoke"
-    assert_match "maelys-json", shell_output("pkg-config --print-requires --with-path=#{lib}/pkgconfig maelys-jsonrpc")
+    requires = shell_output("pkg-config --print-requires --with-path=#{lib}/pkgconfig maelys-jsonrpc")
+    assert_match "maelys-json", requires
   end
 end

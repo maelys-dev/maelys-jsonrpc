@@ -5,6 +5,7 @@ libclang-rt-dev
 cmake
 pkg-config
 libjansson-dev
+python3
 
 [macos]
 llvm
