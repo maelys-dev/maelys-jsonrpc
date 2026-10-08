@@ -1,0 +1,4 @@
+{"id":1,"method":"initialize","params":{"protocolVersion":1,"clientCapabilities":{},"clientInfo":{"name":"jsonrpc-corpus","version":"0"}},"jsonrpc":"2.0"}
+{"id":2,"method":"session/new","params":{"cwd":"/private/tmp/jsonrpc-corpus-synthetic","mcpServers":[]},"jsonrpc":"2.0"}
+{"id":3,"method":"session/load","params":{"sessionId":"gemini-session-new","cwd":"/private/tmp/jsonrpc-corpus-synthetic","mcpServers":[]},"jsonrpc":"2.0"}
+{"id":4,"method":"session/prompt","params":{"sessionId":"gemini-session-new","prompt":[{"type":"text","text":"synthetic-4"}]},"jsonrpc":"2.0"}

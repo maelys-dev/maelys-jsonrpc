@@ -1,0 +1,2840 @@
+{
+  "codexmanager": [
+    {
+      "hits": [
+        {
+          "line": 83,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_serialize(&ll->core, root, &frame, &frame_len);"
+        },
+        {
+          "line": 137,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_feed(&ll->core, bytes, len);"
+        },
+        {
+          "line": 189,
+          "text": "core_config.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES;"
+        },
+        {
+          "line": 190,
+          "text": "maelys_jsonrpc_core_options_t core_options = {"
+        },
+        {
+          "line": 195,
+          "text": "r = maelys_jsonrpc_core_init(&ll->core, &core_options);"
+        },
+        {
+          "line": 215,
+          "text": "maelys_jsonrpc_core_clear(&ll->core);"
+        },
+        {
+          "line": 249,
+          "text": "r = maelys_jsonrpc_core_serialize(&ll->core, request, &frame, &frame_len);"
+        },
+        {
+          "line": 301,
+          "text": "maelys_jsonrpc_core_clear(&ll->core);"
+        }
+      ],
+      "path": "agents/execution/agent_process_longlived.c",
+      "sha256": "3b4f2a690f36cc29a211c044823b02cfbd9c78c0ec164c8892e0a93e9570d150",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 21,
+          "text": "maelys_jsonrpc_core_t core;"
+        }
+      ],
+      "path": "agents/execution/agent_process_longlived.h",
+      "sha256": "124d18c8e9ca2aef8f586b9ddeea9a3ed0b9470fc6b44ce939cea3fd5275f705",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 66,
+          "text": "maelys_jsonrpc_runtime_adapter_t jsonrpc_adapter;"
+        }
+      ],
+      "path": "agents/providers/codex/codex_app_server_internal.h",
+      "sha256": "815c7ef0c0c427d79d62baab3a2835d0ef13bea7166cfe44b3f4e9247070e735",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 72,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 73,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)ctx;"
+        },
+        {
+          "line": 265,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t adapter_cfg;"
+        },
+        {
+          "line": 271,
+          "text": "if (maelys_jsonrpc_runtime_adapter_init(&s->jsonrpc_adapter, &adapter_cfg) != MAELYS_OK) {"
+        },
+        {
+          "line": 281,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(&s->jsonrpc_adapter, &runtime_cfg);"
+        },
+        {
+          "line": 593,
+          "text": "maelys_result_t adapter_error = maelys_jsonrpc_runtime_adapter_last_error(&s->jsonrpc_adapter);"
+        },
+        {
+          "line": 692,
+          "text": "if (s->jsonrpc_adapter_initialized) maelys_jsonrpc_runtime_adapter_clear(&s->jsonrpc_adapter);"
+        }
+      ],
+      "path": "agents/providers/codex/codex_app_server_profile.c",
+      "sha256": "74f684a0e5aa4e78d384bd1b58fd4c1505e14687eed2f526df5ee5af19273b89",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 28,
+          "text": "maelys_jsonrpc_runtime_adapter_t jsonrpc_adapter;"
+        },
+        {
+          "line": 155,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t adapter_config = {"
+        },
+        {
+          "line": 162,
+          "text": "r = maelys_jsonrpc_runtime_adapter_init(&p->jsonrpc_adapter, &adapter_config);"
+        },
+        {
+          "line": 170,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(&p->jsonrpc_adapter, &runtime_config);"
+        },
+        {
+          "line": 349,
+          "text": "maelys_jsonrpc_runtime_adapter_reset_error(&profile->jsonrpc_adapter);"
+        },
+        {
+          "line": 365,
+          "text": "maelys_jsonrpc_runtime_adapter_last_error(&profile->jsonrpc_adapter);"
+        },
+        {
+          "line": 407,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 408,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&profile->jsonrpc_adapter, &stats);"
+        },
+        {
+          "line": 424,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 425,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&profile->jsonrpc_adapter, &stats);"
+        },
+        {
+          "line": 438,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&profile->jsonrpc_adapter);"
+        }
+      ],
+      "path": "agents/providers/gemini/gemini_acp_profile.c",
+      "sha256": "2ddab87dbe172a61808835061a1b520c54c54e22747f081320c4bf8b478bbd4a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 58,
+          "text": "maelys_jsonrpc_core_t core;           /**< Core JSON-RPC serializer. */"
+        },
+        {
+          "line": 186,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_serialize(&c->core, root, &frame, &frame_len);"
+        },
+        {
+          "line": 616,
+          "text": "core_config.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES;"
+        },
+        {
+          "line": 617,
+          "text": "maelys_jsonrpc_core_options_t core_options = {"
+        },
+        {
+          "line": 622,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_init(&c->core, &core_options);"
+        },
+        {
+          "line": 635,
+          "text": "if (client->core_initialized) maelys_jsonrpc_core_clear(&client->core);"
+        }
+      ],
+      "path": "protocols/acp/acp_client.c",
+      "sha256": "6485c4415ba516186b1be87ef9fa764eca4d40b4f0b04f0a7568cd20d979146c",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 18,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t *adapter_config,"
+        }
+      ],
+      "path": "protocols/app_server/app_server_jsonrpc_binding.c",
+      "sha256": "e0a211a166114b282cf129fe39128316249854a0041ce05e480d52739890fd8b",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 32,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t *adapter_config,"
+        }
+      ],
+      "path": "protocols/app_server/app_server_jsonrpc_binding.h",
+      "sha256": "54daa7c664c7e39d5ca7141cf3ffe6a088314e64c23b9d0a0d9354b9c36896b4",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 138,
+          "text": "server->adapter = (maelys_jsonrpc_runtime_adapter_t *)calloc(1u, sizeof(*server->adapter));"
+        },
+        {
+          "line": 160,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t adapter_config = {"
+        },
+        {
+          "line": 167,
+          "text": "r = maelys_jsonrpc_runtime_adapter_init(server->adapter, &adapter_config);"
+        },
+        {
+          "line": 178,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(server->adapter, &runtime_config);"
+        },
+        {
+          "line": 215,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(server->adapter);"
+        }
+      ],
+      "path": "protocols/mcp/mcp_endpoint_runtime_server.c",
+      "sha256": "1cad4bf4e8a8802b887b04403a8944255f4e408659eb39f6a69ef3396dfb7019",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 20,
+          "text": "typedef struct maelys_jsonrpc_runtime_adapter maelys_jsonrpc_runtime_adapter_t;"
+        },
+        {
+          "line": 28,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter;"
+        }
+      ],
+      "path": "protocols/mcp/mcp_endpoint_runtime_server.h",
+      "sha256": "9151c717cb64835c828835c1039c7b00a82ec58817d820d4df1b7702abdcca5a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 286,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 287,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t adapter_config;"
+        },
+        {
+          "line": 292,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_runtime_adapter_init(&adapter, &adapter_config), \"%d\");"
+        },
+        {
+          "line": 293,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        }
+      ],
+      "path": "tests/test_app_server_protocol.c",
+      "sha256": "2d9b14baaa7953bd1e0e4a655b1322594ea7ef4c20eedff4cc623990c7298b28",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 519,
+          "text": "\"maelys_jsonrpc_runtime_adapter_t\"));"
+        },
+        {
+          "line": 521,
+          "text": "\"maelys_jsonrpc_runtime_adapter_configure_runtime\"));"
+        },
+        {
+          "line": 537,
+          "text": "\"maelys_jsonrpc_core_t\"));"
+        },
+        {
+          "line": 539,
+          "text": "\"maelys_jsonrpc_core_init\"));"
+        },
+        {
+          "line": 541,
+          "text": "\"maelys_jsonrpc_core_feed\"));"
+        }
+      ],
+      "path": "tests/test_codex_app_server.c",
+      "sha256": "26ea1b5cd86bbccfa575ad16d6575f3be184bceb8dff29a1cdcc93f537f81f2f",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 39,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 43,
+          "text": "maelys_jsonrpc_runtime_adapter_config_t config;"
+        },
+        {
+          "line": 50,
+          "text": "return maelys_jsonrpc_runtime_adapter_init(adapter, &config);"
+        },
+        {
+          "line": 53,
+          "text": "static void feed_bytes(maelys_jsonrpc_runtime_adapter_t *adapter, const char *text) {"
+        },
+        {
+          "line": 56,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(adapter, &runtime_config);"
+        },
+        {
+          "line": 60,
+          "text": "static void feed_raw(maelys_jsonrpc_runtime_adapter_t *adapter, const void *bytes, size_t len) {"
+        },
+        {
+          "line": 63,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(adapter, &runtime_config);"
+        },
+        {
+          "line": 67,
+          "text": "static void send_timeout(maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 70,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(adapter, &runtime_config);"
+        },
+        {
+          "line": 74,
+          "text": "static void send_fault(maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 77,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(adapter, &runtime_config);"
+        },
+        {
+          "line": 81,
+          "text": "static void send_close(maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 84,
+          "text": "maelys_jsonrpc_runtime_adapter_configure_runtime(adapter, &runtime_config);"
+        },
+        {
+          "line": 92,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 101,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 109,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 115,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 123,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 128,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 129,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 132,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 140,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 143,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 144,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 148,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 151,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 154,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 162,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 172,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 173,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 176,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 179,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 187,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 190,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 191,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 196,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 204,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 208,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 209,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 215,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 223,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 226,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 227,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 231,
+          "text": "TEST_ASSERT_TRUE(maelys_jsonrpc_runtime_adapter_last_error(&adapter) != MAELYS_OK);"
+        },
+        {
+          "line": 232,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 240,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 244,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 245,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 249,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 257,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 263,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 264,
+          "text": "maelys_jsonrpc_runtime_adapter_get_stats(&adapter, &stats);"
+        },
+        {
+          "line": 270,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        },
+        {
+          "line": 278,
+          "text": "maelys_jsonrpc_runtime_adapter_t adapter;"
+        },
+        {
+          "line": 282,
+          "text": "maelys_jsonrpc_runtime_adapter_last_error(&adapter), \"%d\");"
+        },
+        {
+          "line": 283,
+          "text": "maelys_jsonrpc_runtime_adapter_reset_error(&adapter);"
+        },
+        {
+          "line": 285,
+          "text": "maelys_jsonrpc_runtime_adapter_last_error(&adapter), \"%d\");"
+        },
+        {
+          "line": 287,
+          "text": "maelys_jsonrpc_runtime_adapter_clear(&adapter);"
+        }
+      ],
+      "path": "tests/test_jsonrpc_runtime_adapter.c",
+      "sha256": "a05b2dca10afa9b18d798708d5e045be52a67c03e0a50a85ad063b52dc2a7f69",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 267,
+          "text": "static int core_init_for_test(maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 270,
+          "text": "maelys_jsonrpc_core_options_t opts = {0};"
+        },
+        {
+          "line": 274,
+          "text": "return maelys_jsonrpc_core_init(core, &opts);"
+        },
+        {
+          "line": 287,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 290,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_JSON_LINES),"
+        },
+        {
+          "line": 293,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, line, strlen(line)), \"%d\");"
+        },
+        {
+          "line": 297,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 303,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 306,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_JSON_LINES),"
+        },
+        {
+          "line": 310,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, part1, strlen(part1)), \"%d\");"
+        },
+        {
+          "line": 312,
+          "text": "TEST_ASSERT_TRUE(maelys_jsonrpc_core_has_buffered_bytes(&core));"
+        },
+        {
+          "line": 313,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, part2, strlen(part2)), \"%d\");"
+        },
+        {
+          "line": 318,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 324,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 327,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_JSON_LINES),"
+        },
+        {
+          "line": 332,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, chunk, strlen(chunk)), \"%d\");"
+        },
+        {
+          "line": 337,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 343,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 346,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_JSON_LINES),"
+        },
+        {
+          "line": 351,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_serialize(&core, call, &bytes, &len), \"%d\");"
+        },
+        {
+          "line": 354,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, bytes, len), \"%d\");"
+        },
+        {
+          "line": 366,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_serialize(&core, note, &bytes, &len), \"%d\");"
+        },
+        {
+          "line": 368,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, bytes, len), \"%d\");"
+        },
+        {
+          "line": 375,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 381,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 384,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH),"
+        },
+        {
+          "line": 389,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, frame, strlen(frame)), \"%d\");"
+        },
+        {
+          "line": 393,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 399,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 402,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH),"
+        },
+        {
+          "line": 409,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, frame, split1), \"%d\");"
+        },
+        {
+          "line": 411,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, frame + split1, split2 - split1), \"%d\");"
+        },
+        {
+          "line": 413,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_core_feed(&core, frame + split2, strlen(frame) - split2), \"%d\");"
+        },
+        {
+          "line": 417,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 423,
+          "text": "maelys_jsonrpc_core_t core = {0};"
+        },
+        {
+          "line": 426,
+          "text": "core_init_for_test(&core, &cap, MAELYS_JSONRPC_FRAMING_JSON_LINES),"
+        },
+        {
+          "line": 429,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_ERR_INVALID_FIELD, maelys_jsonrpc_core_feed(&core, bad, strlen(bad)), \"%d\");"
+        },
+        {
+          "line": 431,
+          "text": "maelys_jsonrpc_core_clear(&core);"
+        },
+        {
+          "line": 433,
+          "text": "maelys_jsonrpc_core_options_t opts = {0};"
+        },
+        {
+          "line": 437,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_ERR_UNSUPPORTED, maelys_jsonrpc_core_init(&core, &opts), \"%d\");"
+        },
+        {
+          "line": 464,
+          "text": "int r = maelys_jsonrpc_transport_open_fds(t, p->client_read, p->client_write, cfg);"
+        },
+        {
+          "line": 482,
+          "text": "ctx->result = maelys_jsonrpc_call(ctx->transport, ctx->method, NULL,"
+        },
+        {
+          "line": 557,
+          "text": "if (cfg && cfg->framing == MAELYS_JSONRPC_FRAMING_JSON_LINES) {"
+        },
+        {
+          "line": 615,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_notify(&t, \"test/notify\", NULL), \"%d\");"
+        },
+        {
+          "line": 771,
+          "text": "maelys_jsonrpc_call(&t, \"test/id-exhausted\", NULL, 10, &resp),"
+        },
+        {
+          "line": 866,
+          "text": "TEST_ASSERT_TRUE(maelys_jsonrpc_call(&t, \"test/after-shutdown\", NULL, 10, &resp) != MAELYS_OK);"
+        },
+        {
+          "line": 867,
+          "text": "TEST_ASSERT_TRUE(maelys_jsonrpc_notify(&t, \"test/after-shutdown\", NULL) != MAELYS_OK);"
+        },
+        {
+          "line": 899,
+          "text": "maelys_jsonrpc_call(&t, \"test/write-fail\", NULL, 100, &resp),"
+        },
+        {
+          "line": 1083,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1115,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1117,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_notify(&t, \"test/json-line-notify\", NULL), \"%d\");"
+        },
+        {
+          "line": 1137,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1200,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1226,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1239,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1270,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        },
+        {
+          "line": 1272,
+          "text": "TEST_ASSERT_EQUAL(MAELYS_OK, maelys_jsonrpc_notify(&t, \"test/no-content-length\", NULL), \"%d\");"
+        },
+        {
+          "line": 1285,
+          "text": "maelys_jsonrpc_config_t cfg = {.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES};"
+        }
+      ],
+      "path": "tests/test_jsonrpc_transport.c",
+      "sha256": "e5ee145068a667b128dc9709196bf242960ec578e858f84c846f1eb4f217519e",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 22,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 32,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 41,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 62,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 63,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)userdata;"
+        },
+        {
+          "line": 71,
+          "text": "static void adapter_feed_current_line(maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 90,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_feed("
+        },
+        {
+          "line": 102,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 110,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 111,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)ctx;"
+        },
+        {
+          "line": 153,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 154,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)ctx;"
+        },
+        {
+          "line": 162,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 163,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)ctx;"
+        },
+        {
+          "line": 172,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter ="
+        },
+        {
+          "line": 173,
+          "text": "(maelys_jsonrpc_runtime_adapter_t *)ctx;"
+        },
+        {
+          "line": 178,
+          "text": "maelys_result_t maelys_jsonrpc_runtime_adapter_init("
+        },
+        {
+          "line": 179,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 180,
+          "text": "const maelys_jsonrpc_runtime_adapter_config_t *config) {"
+        },
+        {
+          "line": 200,
+          "text": "core_config.framing = MAELYS_JSONRPC_FRAMING_JSON_LINES;"
+        },
+        {
+          "line": 202,
+          "text": "maelys_jsonrpc_core_options_t core_options = {"
+        },
+        {
+          "line": 207,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_init(&adapter->core, &core_options);"
+        },
+        {
+          "line": 217,
+          "text": "void maelys_jsonrpc_runtime_adapter_clear("
+        },
+        {
+          "line": 218,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 221,
+          "text": "maelys_jsonrpc_core_clear(&adapter->core);"
+        },
+        {
+          "line": 227,
+          "text": "void maelys_jsonrpc_runtime_adapter_configure_runtime("
+        },
+        {
+          "line": 228,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 239,
+          "text": "void maelys_jsonrpc_runtime_adapter_get_stats("
+        },
+        {
+          "line": 240,
+          "text": "const maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 241,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t *out) {"
+        },
+        {
+          "line": 249,
+          "text": "maelys_result_t maelys_jsonrpc_runtime_adapter_last_error("
+        },
+        {
+          "line": 250,
+          "text": "const maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        },
+        {
+          "line": 254,
+          "text": "void maelys_jsonrpc_runtime_adapter_reset_error("
+        },
+        {
+          "line": 255,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter) {"
+        }
+      ],
+      "path": "transports/jsonrpc_runtime_adapter.c",
+      "sha256": "b36ae05cf7c5b77b5d1b782139c20fb4de77ea030b6c06d32c13ae82d45b505a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 18,
+          "text": "typedef struct maelys_jsonrpc_runtime_adapter maelys_jsonrpc_runtime_adapter_t;"
+        },
+        {
+          "line": 28,
+          "text": "typedef struct maelys_jsonrpc_runtime_adapter_config {"
+        },
+        {
+          "line": 34,
+          "text": "} maelys_jsonrpc_runtime_adapter_config_t;"
+        },
+        {
+          "line": 36,
+          "text": "typedef struct maelys_jsonrpc_runtime_adapter_stats {"
+        },
+        {
+          "line": 60,
+          "text": "} maelys_jsonrpc_runtime_adapter_stats_t;"
+        },
+        {
+          "line": 63,
+          "text": "maelys_jsonrpc_core_t core;"
+        },
+        {
+          "line": 76,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t stats;"
+        },
+        {
+          "line": 79,
+          "text": "maelys_result_t maelys_jsonrpc_runtime_adapter_init("
+        },
+        {
+          "line": 80,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 81,
+          "text": "const maelys_jsonrpc_runtime_adapter_config_t *config);"
+        },
+        {
+          "line": 83,
+          "text": "void maelys_jsonrpc_runtime_adapter_clear("
+        },
+        {
+          "line": 84,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter);"
+        },
+        {
+          "line": 86,
+          "text": "void maelys_jsonrpc_runtime_adapter_configure_runtime("
+        },
+        {
+          "line": 87,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 90,
+          "text": "void maelys_jsonrpc_runtime_adapter_get_stats("
+        },
+        {
+          "line": 91,
+          "text": "const maelys_jsonrpc_runtime_adapter_t *adapter,"
+        },
+        {
+          "line": 92,
+          "text": "maelys_jsonrpc_runtime_adapter_stats_t *out);"
+        },
+        {
+          "line": 94,
+          "text": "maelys_result_t maelys_jsonrpc_runtime_adapter_last_error("
+        },
+        {
+          "line": 95,
+          "text": "const maelys_jsonrpc_runtime_adapter_t *adapter);"
+        },
+        {
+          "line": 97,
+          "text": "void maelys_jsonrpc_runtime_adapter_reset_error("
+        },
+        {
+          "line": 98,
+          "text": "maelys_jsonrpc_runtime_adapter_t *adapter);"
+        }
+      ],
+      "path": "transports/jsonrpc_runtime_adapter.h",
+      "sha256": "9083aa01e474f316bad546e92704dfc1a3f67e0e96011054722ac0f3ef7e7df7",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 167,
+          "text": "maelys_result_t r = maelys_jsonrpc_core_serialize(t->core, msg, &frame, &frame_len);"
+        },
+        {
+          "line": 394,
+          "text": "maelys_result_t pr = maelys_jsonrpc_core_feed(t->core, tmp, (size_t)r);"
+        },
+        {
+          "line": 400,
+          "text": "fail_transport(t, maelys_jsonrpc_core_has_buffered_bytes(t->core) ?"
+        },
+        {
+          "line": 418,
+          "text": "maelys_result_t maelys_jsonrpc_transport_open_fds("
+        },
+        {
+          "line": 426,
+          "text": "if (normalized.framing != MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH &&"
+        },
+        {
+          "line": 427,
+          "text": "normalized.framing != MAELYS_JSONRPC_FRAMING_JSON_LINES) {"
+        },
+        {
+          "line": 438,
+          "text": "transport->core = (maelys_jsonrpc_core_t *)calloc(1, sizeof(*transport->core));"
+        },
+        {
+          "line": 443,
+          "text": "maelys_jsonrpc_core_options_t core_options = {"
+        },
+        {
+          "line": 448,
+          "text": "maelys_result_t cr = maelys_jsonrpc_core_init(transport->core, &core_options);"
+        },
+        {
+          "line": 542,
+          "text": "maelys_jsonrpc_core_clear(transport->core);"
+        },
+        {
+          "line": 601,
+          "text": "maelys_result_t maelys_jsonrpc_call("
+        },
+        {
+          "line": 679,
+          "text": "maelys_result_t maelys_jsonrpc_notify("
+        }
+      ],
+      "path": "transports/jsonrpc_transport.c",
+      "sha256": "1e78303e2d70bae9418509ee37eaebb594535607c04d1a0a7da63b0a40a46da8",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 25,
+          "text": "MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH = 0,"
+        },
+        {
+          "line": 26,
+          "text": "MAELYS_JSONRPC_FRAMING_JSON_LINES = 1,"
+        },
+        {
+          "line": 55,
+          "text": "typedef struct maelys_jsonrpc_core maelys_jsonrpc_core_t;"
+        },
+        {
+          "line": 74,
+          "text": "maelys_jsonrpc_core_t *core;"
+        },
+        {
+          "line": 84,
+          "text": "maelys_result_t maelys_jsonrpc_transport_open_fds("
+        },
+        {
+          "line": 99,
+          "text": "maelys_result_t maelys_jsonrpc_call("
+        },
+        {
+          "line": 106,
+          "text": "maelys_result_t maelys_jsonrpc_notify("
+        }
+      ],
+      "path": "transports/jsonrpc_transport.h",
+      "sha256": "7506c88773d677ba349f9faa80e3adcf060cadcbbe2a4d4efa42d8323e447c4f",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 36,
+          "text": "static int core_buffer_append(maelys_jsonrpc_core_t *core, const char *src, size_t n) {"
+        },
+        {
+          "line": 57,
+          "text": "static void core_buffer_consume(maelys_jsonrpc_core_t *core, size_t n) {"
+        },
+        {
+          "line": 127,
+          "text": "static maelys_result_t emit_message(maelys_jsonrpc_core_t *core, json_t *root) {"
+        },
+        {
+          "line": 135,
+          "text": "static maelys_result_t parse_available_frames(maelys_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 175,
+          "text": "static maelys_result_t parse_available_json_lines(maelys_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 201,
+          "text": "maelys_result_t maelys_jsonrpc_core_init("
+        },
+        {
+          "line": 202,
+          "text": "maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 203,
+          "text": "const maelys_jsonrpc_core_options_t *options) {"
+        },
+        {
+          "line": 207,
+          "text": "if (normalized.framing != MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH &&"
+        },
+        {
+          "line": 208,
+          "text": "normalized.framing != MAELYS_JSONRPC_FRAMING_JSON_LINES) {"
+        },
+        {
+          "line": 218,
+          "text": "void maelys_jsonrpc_core_clear(maelys_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 224,
+          "text": "maelys_result_t maelys_jsonrpc_core_feed("
+        },
+        {
+          "line": 225,
+          "text": "maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 233,
+          "text": "if (core->config.framing == MAELYS_JSONRPC_FRAMING_JSON_LINES) {"
+        },
+        {
+          "line": 236,
+          "text": "if (core->config.framing == MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH) {"
+        },
+        {
+          "line": 242,
+          "text": "maelys_result_t maelys_jsonrpc_core_serialize("
+        },
+        {
+          "line": 243,
+          "text": "const maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 253,
+          "text": "if (core->config.framing == MAELYS_JSONRPC_FRAMING_JSON_LINES) {"
+        },
+        {
+          "line": 274,
+          "text": "if (core->config.framing == MAELYS_JSONRPC_FRAMING_CONTENT_LENGTH) {"
+        },
+        {
+          "line": 302,
+          "text": "int maelys_jsonrpc_core_has_buffered_bytes("
+        },
+        {
+          "line": 303,
+          "text": "const maelys_jsonrpc_core_t *core) {"
+        }
+      ],
+      "path": "transports/jsonrpc_transport_core.c",
+      "sha256": "76c1a3d79b5256490380337df40f9fd63f387dcf9145a50c6180e0402712b4a5",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 16,
+          "text": "typedef struct maelys_jsonrpc_core maelys_jsonrpc_core_t;"
+        },
+        {
+          "line": 18,
+          "text": "typedef maelys_result_t (*maelys_jsonrpc_core_message_fn)("
+        },
+        {
+          "line": 22,
+          "text": "typedef struct maelys_jsonrpc_core_options {"
+        },
+        {
+          "line": 24,
+          "text": "maelys_jsonrpc_core_message_fn on_message;"
+        },
+        {
+          "line": 26,
+          "text": "} maelys_jsonrpc_core_options_t;"
+        },
+        {
+          "line": 30,
+          "text": "maelys_jsonrpc_core_message_fn on_message;"
+        },
+        {
+          "line": 41,
+          "text": "maelys_result_t maelys_jsonrpc_core_init("
+        },
+        {
+          "line": 42,
+          "text": "maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 43,
+          "text": "const maelys_jsonrpc_core_options_t *options);"
+        },
+        {
+          "line": 45,
+          "text": "void maelys_jsonrpc_core_clear("
+        },
+        {
+          "line": 46,
+          "text": "maelys_jsonrpc_core_t *core);"
+        },
+        {
+          "line": 48,
+          "text": "maelys_result_t maelys_jsonrpc_core_feed("
+        },
+        {
+          "line": 49,
+          "text": "maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 53,
+          "text": "maelys_result_t maelys_jsonrpc_core_serialize("
+        },
+        {
+          "line": 54,
+          "text": "const maelys_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 59,
+          "text": "int maelys_jsonrpc_core_has_buffered_bytes("
+        },
+        {
+          "line": 60,
+          "text": "const maelys_jsonrpc_core_t *core);"
+        }
+      ],
+      "path": "transports/jsonrpc_transport_core.h",
+      "sha256": "72df9e70aaec68079b3e49447c32a7010cc3fd90b402ee83a87a6b957287f10b",
+      "test_only": false
+    }
+  ],
+  "maelys-json": [
+    {
+      "hits": [
+        {
+          "line": 36,
+          "text": "#define MAELYS_JSON_VERSION_MAJOR 0"
+        },
+        {
+          "line": 37,
+          "text": "#define MAELYS_JSON_VERSION_MINOR 3"
+        },
+        {
+          "line": 38,
+          "text": "#define MAELYS_JSON_VERSION_PATCH 0"
+        },
+        {
+          "line": 39,
+          "text": "#define MAELYS_JSON_VERSION_STRING \"0.3.0\""
+        },
+        {
+          "line": 43,
+          "text": "#define MAELYS_JSON_ABI_VERSION 3u"
+        },
+        {
+          "line": 54,
+          "text": "/* Longest number lexeme maelys_json_writer_number_text accepts. */"
+        },
+        {
+          "line": 55,
+          "text": "#define MAELYS_JSON_MAXIMUM_NUMBER_TEXT 64u"
+        },
+        {
+          "line": 81,
+          "text": "MAELYS_JSON_ERR_NOT_INTEGER = 11,"
+        },
+        {
+          "line": 88,
+          "text": "*   strings and keys (so every view is a valid C string), a byte order mark is"
+        },
+        {
+          "line": 154,
+          "text": "/* Runtime version string, equal to MAELYS_JSON_VERSION_STRING of the"
+        },
+        {
+          "line": 258,
+          "text": "/* Integer readers. \"-0\" reads as 0. Errors: ARGUMENT, TYPE, NOT_INTEGER"
+        },
+        {
+          "line": 354,
+          "text": "* surrounding space. At most MAELYS_JSON_MAXIMUM_NUMBER_TEXT bytes."
+        },
+        {
+          "line": 366,
+          "text": "maelys_json_result_t maelys_json_writer_number_text("
+        },
+        {
+          "line": 376,
+          "text": "* its lexeme, as maelys_json_writer_number_text would, so what was read can"
+        },
+        {
+          "line": 382,
+          "text": "maelys_json_result_t maelys_json_writer_value("
+        }
+      ],
+      "path": "include/maelys/json.h",
+      "sha256": "d0cd74d7acebc506167442ccc3625f23f39fb95e4445dfd6103ef0a35bfefec4",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 8,
+          "text": "return MAELYS_JSON_VERSION_STRING;"
+        },
+        {
+          "line": 138,
+          "text": "case MAELYS_JSON_ERR_NOT_INTEGER: return \"number is not an integer\";"
+        }
+      ],
+      "path": "src/common.c",
+      "sha256": "b65a7caed9c2eae906ab78aabd4456435f50e7f6572c6e35b639626108d84619",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 217,
+          "text": "return MAELYS_JSON_ERR_NOT_INTEGER;"
+        }
+      ],
+      "path": "src/document.c",
+      "sha256": "9fdbe9cc2cdd53f42c3c189804e8b805f7460e57d0b12dd7eb11ac48b2c14d56",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 94,
+          "text": "result = maelys_json_writer_value(writer, document, 0u);"
+        },
+        {
+          "line": 105,
+          "text": "case MAELYS_JSON_ERR_NOT_INTEGER:"
+        },
+        {
+          "line": 109,
+          "text": "* writer no longer answers NOT_INTEGER; the enumerator stays so"
+        }
+      ],
+      "path": "src/helpers.c",
+      "sha256": "a3bd9c7435af1490f0b0076a36f8b4734d569f8ca5b6640bfd12c956c08fabae",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 90,
+          "text": "if (byte < 0x20u) {"
+        }
+      ],
+      "path": "src/parser.c",
+      "sha256": "710638d80cfad6a842a79957d6039a3564f5f87529c13c2e0671b228df26039a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 108,
+          "text": "} else if (byte < 0x20u) {"
+        }
+      ],
+      "path": "src/serialize.c",
+      "sha256": "a6a514c25e92d3f551a4b0365a21d084ce42378175ed4eb027b45837c25abe87",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 191,
+          "text": "if (byte < 0x20u || byte > 0x7eu || byte == '\\\\') {"
+        }
+      ],
+      "path": "src/utf8.c",
+      "sha256": "6c7e232db937d35592454745d318431881194f293fc4b364c7164e5911b5653a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 54,
+          "text": "if (byte < 0x20u || byte > 0x7eu || byte == '\"' || byte == '\\\\') {"
+        },
+        {
+          "line": 358,
+          "text": "* lexeme accepted: the public call bounds it to MAELYS_JSON_MAXIMUM_NUMBER_TEXT,"
+        },
+        {
+          "line": 361,
+          "text": "static maelys_json_result_t write_number_lexeme("
+        },
+        {
+          "line": 390,
+          "text": "maelys_json_result_t maelys_json_writer_number_text("
+        },
+        {
+          "line": 392,
+          "text": "return write_number_lexeme(writer, lexeme, length,"
+        },
+        {
+          "line": 393,
+          "text": "MAELYS_JSON_MAXIMUM_NUMBER_TEXT);"
+        },
+        {
+          "line": 412,
+          "text": "static maelys_json_result_t copy_number("
+        },
+        {
+          "line": 424,
+          "text": "if (result != MAELYS_JSON_ERR_NOT_INTEGER) {"
+        },
+        {
+          "line": 431,
+          "text": "if (result != MAELYS_JSON_ERR_NOT_INTEGER) {"
+        },
+        {
+          "line": 438,
+          "text": "return write_number_lexeme(writer, text.data, text.size,"
+        },
+        {
+          "line": 507,
+          "text": "return copy_number(writer, document, value);"
+        },
+        {
+          "line": 532,
+          "text": "maelys_json_result_t maelys_json_writer_value("
+        }
+      ],
+      "path": "src/writer.c",
+      "sha256": "3aa7dc3b4b7222f5ea50e748e323a9c6a598c5d31abf1facdb1215f886aed001",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 14,
+          "text": "* number came from maelys_json_writer_number_text. */"
+        }
+      ],
+      "path": "src/writer_internal.h",
+      "sha256": "3eb2a26be5e51edb584204b7e10d449e531bec0ca8e0e9e5c97991cfc3c3b07a",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 3,
+          "text": "* Fuzzes the lexeme validator of maelys_json_writer_number_text against the"
+        },
+        {
+          "line": 28,
+          "text": "maelys_json_result_t result = maelys_json_writer_number_text(writer, lexeme,"
+        },
+        {
+          "line": 33,
+          "text": "size <= MAELYS_JSON_MAXIMUM_NUMBER_TEXT) {"
+        },
+        {
+          "line": 63,
+          "text": "maelys_json_result_t written = maelys_json_writer_number_text(writer, lexeme,"
+        }
+      ],
+      "path": "tests/fuzz/fuzz_number_text.c",
+      "sha256": "c3264408311ebb70eb5de5c029376cf19e62b4e3f082cff210e4f1910b6ea555",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 30,
+          "text": "maelys_json_result_t result = maelys_json_writer_value(writer, document, 0u);"
+        }
+      ],
+      "path": "tests/fuzz/fuzz_roundtrip.c",
+      "sha256": "5f429682de5abfb4ec6644937f7c576e0099e7a6df0cfc15402ec8e8feaedb5d",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 36,
+          "text": "CHECK_RESULT(maelys_json_object_get_u64(document, 0u, \"fraction\", &u), MAELYS_JSON_ERR_NOT_INTEGER);"
+        },
+        {
+          "line": 37,
+          "text": "CHECK_RESULT(maelys_json_object_get_i64(document, 0u, \"fraction\", &i), MAELYS_JSON_ERR_NOT_INTEGER);"
+        },
+        {
+          "line": 38,
+          "text": "CHECK_RESULT(maelys_json_object_get_i64(document, 0u, \"exponent\", &i), MAELYS_JSON_ERR_NOT_INTEGER);"
+        },
+        {
+          "line": 201,
+          "text": "CHECK(strcmp(maelys_json_version(), MAELYS_JSON_VERSION_STRING) == 0);"
+        },
+        {
+          "line": 203,
+          "text": "snprintf(expected, sizeof(expected), \"%d.%d.%d\", MAELYS_JSON_VERSION_MAJOR,"
+        },
+        {
+          "line": 204,
+          "text": "MAELYS_JSON_VERSION_MINOR, MAELYS_JSON_VERSION_PATCH);"
+        },
+        {
+          "line": 205,
+          "text": "CHECK(strcmp(expected, MAELYS_JSON_VERSION_STRING) == 0);"
+        }
+      ],
+      "path": "tests/test_reader.c",
+      "sha256": "24a2a37beee366ab18c474e829edbaf866d226d0f835b74c08c1968a7d79a800",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 74,
+          "text": "maelys_json_writer_value(writer, document, 0u) == MAELYS_JSON_OK) {"
+        }
+      ],
+      "path": "tests/test_vectors.c",
+      "sha256": "8c27d20dfd0efad6cdb5b6606f072c6ea938ddc18f9d93090c8bf276cb4aca7f",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 333,
+          "text": "CHECK_RESULT(maelys_json_writer_value(NULL, NULL, 0u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 395,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document,"
+        },
+        {
+          "line": 399,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, b), MAELYS_JSON_OK);"
+        },
+        {
+          "line": 400,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 999u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 401,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, NULL, 0u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 410,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 421,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_OK);"
+        },
+        {
+          "line": 431,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_ERR_RANGE);"
+        },
+        {
+          "line": 441,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_ERR_LIMIT);"
+        },
+        {
+          "line": 546,
+          "text": "/* A profile mismatch mid-copy is sticky, like writer_value. */"
+        },
+        {
+          "line": 655,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, lexemes[i],"
+        },
+        {
+          "line": 669,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, \"1.5e3\", 5u), MAELYS_JSON_OK);"
+        },
+        {
+          "line": 685,
+          "text": "maelys_json_result_t result = maelys_json_writer_number_text(writer,"
+        },
+        {
+          "line": 696,
+          "text": "char digits[MAELYS_JSON_MAXIMUM_NUMBER_TEXT + 2u];"
+        },
+        {
+          "line": 698,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, digits,"
+        },
+        {
+          "line": 699,
+          "text": "MAELYS_JSON_MAXIMUM_NUMBER_TEXT + 1u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 700,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, NULL, 1u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 701,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(NULL, \"1\", 1u), MAELYS_JSON_ERR_ARGUMENT);"
+        },
+        {
+          "line": 703,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, digits,"
+        },
+        {
+          "line": 704,
+          "text": "MAELYS_JSON_MAXIMUM_NUMBER_TEXT), MAELYS_JSON_OK);"
+        },
+        {
+          "line": 705,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, \"1\", 1u), MAELYS_JSON_ERR_STATE);"
+        },
+        {
+          "line": 712,
+          "text": "CHECK_RESULT(maelys_json_writer_number_text(writer, \"1.5e3\", 5u), MAELYS_JSON_ERR_LIMIT);"
+        },
+        {
+          "line": 731,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document,"
+        },
+        {
+          "line": 749,
+          "text": "char text[MAELYS_JSON_MAXIMUM_NUMBER_TEXT + 12u];"
+        },
+        {
+          "line": 753,
+          "text": "while (length < MAELYS_JSON_MAXIMUM_NUMBER_TEXT + 10u) {"
+        },
+        {
+          "line": 761,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_OK);"
+        },
+        {
+          "line": 777,
+          "text": "CHECK_RESULT(maelys_json_writer_value(writer, document, 0u), MAELYS_JSON_OK);"
+        }
+      ],
+      "path": "tests/test_writer.c",
+      "sha256": "ede9c447a011a0a2c913d17c234926503d15216b58b48e3e0517ad112683223a",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 120,
+          "text": "if (maelys_json_writer_value(writer, document, 0u) != MAELYS_JSON_OK ||"
+        }
+      ],
+      "path": "tools/bench.c",
+      "sha256": "6303de59ed3096eaeebc6dfe5d1455dc0c512a7069143a60b500b2ae42f565b5",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 124,
+          "text": "result = maelys_json_writer_value(writer, document, 0u);"
+        },
+        {
+          "line": 131,
+          "text": "status = result == MAELYS_JSON_ERR_NOT_INTEGER ||"
+        }
+      ],
+      "path": "tools/canon.c",
+      "sha256": "6ba997a09057c4d7ba23b2118cacdd2fb7a0464b83a60b1303e09e01a9d4cdc8",
+      "test_only": false
+    }
+  ],
+  "maelys-mcp": [
+    {
+      "hits": [
+        {
+          "line": 10,
+          "text": "JSON_REJECT_DUPLICATES | JSON_DECODE_ANY, &parse_error);"
+        }
+      ],
+      "path": "fuzz/fuzz_content.c",
+      "sha256": "8dd1255b81b9949f4356520b8d413ea141d6ac74e1124df91ae90bf0c26aa844",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 13,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 15,
+          "text": ".framing = MAELYS_MCP_JSONRPC_CONTENT_LENGTH,"
+        },
+        {
+          "line": 20,
+          "text": "if (maelys_mcp_jsonrpc_core_init(&core, &options) != MAELYS_MCP_OK) return 0;"
+        },
+        {
+          "line": 25,
+          "text": "if (maelys_mcp_jsonrpc_core_feed(&core, data + offset, chunk) != MAELYS_MCP_OK) break;"
+        },
+        {
+          "line": 28,
+          "text": "(void)maelys_mcp_jsonrpc_core_finish(&core);"
+        },
+        {
+          "line": 29,
+          "text": "maelys_mcp_jsonrpc_core_clear(&core);"
+        }
+      ],
+      "path": "fuzz/fuzz_content_length.c",
+      "sha256": "3a8cbccb3475e9c618863bd41af12b78f48b3c754f113b27ab2002022ef6222c",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 13,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 15,
+          "text": ".framing = MAELYS_MCP_JSONRPC_JSON_LINES,"
+        },
+        {
+          "line": 19,
+          "text": "if (maelys_mcp_jsonrpc_core_init(&core, &options) != MAELYS_MCP_OK) return 0;"
+        },
+        {
+          "line": 24,
+          "text": "if (maelys_mcp_jsonrpc_core_feed(&core, data + offset, chunk) != MAELYS_MCP_OK) break;"
+        },
+        {
+          "line": 27,
+          "text": "(void)maelys_mcp_jsonrpc_core_finish(&core);"
+        },
+        {
+          "line": 28,
+          "text": "maelys_mcp_jsonrpc_core_clear(&core);"
+        }
+      ],
+      "path": "fuzz/fuzz_json_lines.c",
+      "sha256": "f01f789ea4b6e5fde58f00075d5853cfb1f9d3bddbac4a489f1ac527de0ee4da",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 9,
+          "text": "json_t *root = json_loadb((const char *)data, size, JSON_REJECT_DUPLICATES, &parse_error);"
+        }
+      ],
+      "path": "fuzz/fuzz_schema.c",
+      "sha256": "9d3798519ee657015d3fb684a84b33dc59eeb624ba5ec9dcb5b1de0f4316bcf4",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 303,
+          "text": "maelys_mcp_result_t maelys_mcp_write_json_line(int fd, json_t *value) {"
+        },
+        {
+          "line": 305,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 307,
+          "text": "core.framing = MAELYS_MCP_JSONRPC_JSON_LINES;"
+        },
+        {
+          "line": 310,
+          "text": "maelys_mcp_result_t result = maelys_mcp_jsonrpc_core_serialize("
+        },
+        {
+          "line": 317,
+          "text": "maelys_mcp_result_t maelys_mcp_write_json_line_with_timeout("
+        },
+        {
+          "line": 322,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 324,
+          "text": "core.framing = MAELYS_MCP_JSONRPC_JSON_LINES;"
+        },
+        {
+          "line": 327,
+          "text": "maelys_mcp_result_t result = maelys_mcp_jsonrpc_core_serialize("
+        },
+        {
+          "line": 342,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_init("
+        },
+        {
+          "line": 343,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 351,
+          "text": "void maelys_mcp_line_reader_clear(maelys_mcp_line_reader_t *reader) {"
+        },
+        {
+          "line": 358,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 378,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 394,
+          "text": "json_t *value = json_loadb(reader->buffer, length, JSON_REJECT_DUPLICATES, &error);"
+        },
+        {
+          "line": 405,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_next("
+        },
+        {
+          "line": 406,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 414,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_read_once("
+        },
+        {
+          "line": 415,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 463,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_read("
+        },
+        {
+          "line": 464,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 473,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_read_once("
+        },
+        {
+          "line": 479,
+          "text": "maelys_mcp_result_t maelys_mcp_read_json_line("
+        },
+        {
+          "line": 484,
+          "text": "maelys_mcp_line_reader_t reader = {0};"
+        },
+        {
+          "line": 485,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_init(&reader, max_bytes);"
+        },
+        {
+          "line": 487,
+          "text": "status = maelys_mcp_line_reader_read(&reader, fd, out_value, out_error);"
+        },
+        {
+          "line": 489,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        }
+      ],
+      "path": "src/core/common.c",
+      "sha256": "753351bd731fb0100b6dc39019083785b015ad54177b39de837d4ee2c9893886",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 618,
+          "text": "* `maelys_mcp_write_json_line` call, which is what keeps a frame from being"
+        },
+        {
+          "line": 720,
+          "text": "} maelys_mcp_line_reader_t;"
+        },
+        {
+          "line": 817,
+          "text": "maelys_mcp_result_t maelys_mcp_write_json_line(int fd, json_t *value);"
+        },
+        {
+          "line": 818,
+          "text": "maelys_mcp_result_t maelys_mcp_write_json_line_with_timeout("
+        },
+        {
+          "line": 822,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_init("
+        },
+        {
+          "line": 823,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 825,
+          "text": "void maelys_mcp_line_reader_clear(maelys_mcp_line_reader_t *reader);"
+        },
+        {
+          "line": 826,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_next("
+        },
+        {
+          "line": 827,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 830,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_read("
+        },
+        {
+          "line": 831,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 835,
+          "text": "maelys_mcp_result_t maelys_mcp_line_reader_read_once("
+        },
+        {
+          "line": 836,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 841,
+          "text": "maelys_mcp_result_t maelys_mcp_read_json_line("
+        }
+      ],
+      "path": "src/internal/internal.h",
+      "sha256": "21b6b85043a54af14679fcce662048437388b9e954379001ead32d92f6a6eb97",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 17,
+          "text": "static int append_bytes(maelys_mcp_jsonrpc_core_t *core, const char *bytes, size_t length) {"
+        },
+        {
+          "line": 38,
+          "text": "static void consume_bytes(maelys_mcp_jsonrpc_core_t *core, size_t length) {"
+        },
+        {
+          "line": 103,
+          "text": "static maelys_mcp_result_t emit(maelys_mcp_jsonrpc_core_t *core, json_t *message) {"
+        },
+        {
+          "line": 108,
+          "text": "static maelys_mcp_result_t parse_lines(maelys_mcp_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 117,
+          "text": "json_t *message = json_loadb(core->buffer, line_length, JSON_REJECT_DUPLICATES, &error);"
+        },
+        {
+          "line": 125,
+          "text": "static maelys_mcp_result_t parse_frames(maelys_mcp_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 140,
+          "text": "body_length, JSON_REJECT_DUPLICATES, &error);"
+        },
+        {
+          "line": 148,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_init("
+        },
+        {
+          "line": 149,
+          "text": "maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 152,
+          "text": "if (options->framing != MAELYS_MCP_JSONRPC_CONTENT_LENGTH &&"
+        },
+        {
+          "line": 153,
+          "text": "options->framing != MAELYS_MCP_JSONRPC_JSON_LINES) return MAELYS_MCP_ERR_ARGUMENT;"
+        },
+        {
+          "line": 164,
+          "text": "void maelys_mcp_jsonrpc_core_clear(maelys_mcp_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 170,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_feed("
+        },
+        {
+          "line": 171,
+          "text": "maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 176,
+          "text": "return core->framing == MAELYS_MCP_JSONRPC_JSON_LINES ? parse_lines(core) : parse_frames(core);"
+        },
+        {
+          "line": 179,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_finish("
+        },
+        {
+          "line": 180,
+          "text": "const maelys_mcp_jsonrpc_core_t *core) {"
+        },
+        {
+          "line": 185,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_serialize("
+        },
+        {
+          "line": 186,
+          "text": "const maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 191,
+          "text": "if (core->framing != MAELYS_MCP_JSONRPC_JSON_LINES &&"
+        },
+        {
+          "line": 192,
+          "text": "core->framing != MAELYS_MCP_JSONRPC_CONTENT_LENGTH) return MAELYS_MCP_ERR_ARGUMENT;"
+        },
+        {
+          "line": 198,
+          "text": "if (core->framing == MAELYS_MCP_JSONRPC_JSON_LINES) {"
+        },
+        {
+          "line": 221,
+          "text": "int maelys_mcp_jsonrpc_core_has_buffered_bytes(const maelys_mcp_jsonrpc_core_t *core) {"
+        }
+      ],
+      "path": "src/jsonrpc/core.c",
+      "sha256": "b6d2bf29795efa865f954149e4109b70770c8be649a7ab50e82b8900c1afabf7",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 9,
+          "text": "MAELYS_MCP_JSONRPC_CONTENT_LENGTH = 0,"
+        },
+        {
+          "line": 10,
+          "text": "MAELYS_MCP_JSONRPC_JSON_LINES = 1"
+        },
+        {
+          "line": 27,
+          "text": "} maelys_mcp_jsonrpc_core_t;"
+        },
+        {
+          "line": 38,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_init("
+        },
+        {
+          "line": 39,
+          "text": "maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 41,
+          "text": "void maelys_mcp_jsonrpc_core_clear(maelys_mcp_jsonrpc_core_t *core);"
+        },
+        {
+          "line": 42,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_feed("
+        },
+        {
+          "line": 43,
+          "text": "maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 46,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_finish("
+        },
+        {
+          "line": 47,
+          "text": "const maelys_mcp_jsonrpc_core_t *core);"
+        },
+        {
+          "line": 48,
+          "text": "maelys_mcp_result_t maelys_mcp_jsonrpc_core_serialize("
+        },
+        {
+          "line": 49,
+          "text": "const maelys_mcp_jsonrpc_core_t *core,"
+        },
+        {
+          "line": 53,
+          "text": "int maelys_mcp_jsonrpc_core_has_buffered_bytes(const maelys_mcp_jsonrpc_core_t *core);"
+        }
+      ],
+      "path": "src/jsonrpc/core.h",
+      "sha256": "f428c49e8702619baf3f08fadddfb25f46f23653cdf81bf17bb34f464c7d861e",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 81,
+          "text": "maelys_mcp_line_reader_t *reader;"
+        },
+        {
+          "line": 187,
+          "text": "maelys_mcp_result_t status = maelys_mcp_write_json_line_with_timeout("
+        },
+        {
+          "line": 232,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_read("
+        },
+        {
+          "line": 712,
+          "text": "maelys_mcp_line_reader_clear(proxy->reader);"
+        },
+        {
+          "line": 805,
+          "text": "if (!proxy->reader || maelys_mcp_line_reader_init("
+        }
+      ],
+      "path": "src/provider/mcp_proxy.c",
+      "sha256": "f6312b45ad209446eec5a6b3722f560a026e5f38d2c07b9c4e4c9672d5dbe3f2",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 205,
+          "text": "maelys_mcp_result_t status = maelys_mcp_write_json_line(process->fd, frame);"
+        },
+        {
+          "line": 289,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_read("
+        },
+        {
+          "line": 644,
+          "text": "maelys_mcp_result_t written = maelys_mcp_write_json_line(process->fd, reply);"
+        },
+        {
+          "line": 740,
+          "text": "maelys_mcp_result_t status = maelys_mcp_write_json_line(process->fd, request);"
+        },
+        {
+          "line": 1288,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        },
+        {
+          "line": 1409,
+          "text": "if (!process->reader || maelys_mcp_line_reader_init("
+        },
+        {
+          "line": 1418,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        },
+        {
+          "line": 1428,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        },
+        {
+          "line": 1439,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        },
+        {
+          "line": 1451,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        },
+        {
+          "line": 1476,
+          "text": "maelys_mcp_line_reader_clear(process->reader);"
+        }
+      ],
+      "path": "src/provider/process_provider.c",
+      "sha256": "d31c660b133bf23329fb76a91e65668f7c7faee3cfd7d58b36743cf3b23fbe36",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 88,
+          "text": "maelys_mcp_line_reader_t *reader;"
+        },
+        {
+          "line": 519,
+          "text": "maelys_mcp_result_t status = maelys_mcp_write_json_line(sdk->output_fd, message);"
+        },
+        {
+          "line": 676,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_next("
+        },
+        {
+          "line": 697,
+          "text": "status = maelys_mcp_line_reader_read_once("
+        },
+        {
+          "line": 1991,
+          "text": "maelys_mcp_result_t read_status = maelys_mcp_line_reader_read("
+        },
+        {
+          "line": 2245,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 2246,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_init("
+        },
+        {
+          "line": 2262,
+          "text": "status = maelys_mcp_line_reader_read(&reader, input_fd, &message, &error);"
+        },
+        {
+          "line": 2298,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        }
+      ],
+      "path": "src/provider/provider_sdk.c",
+      "sha256": "1758c1e09b0041a3ab76b9ab1d665fb12fd2d7905aa9d2b1553ef88779258462",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 1223,
+          "text": "* No JSON_REJECT_DUPLICATES. Jansson keeps the last occurrence of a"
+        }
+      ],
+      "path": "src/transport/http_adapter.c",
+      "sha256": "b478007c339db9d078ab693dddf5845092937f6db79a349f405ab41fe1d17854",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 52,
+          "text": "status = maelys_mcp_write_json_line_with_timeout("
+        },
+        {
+          "line": 98,
+          "text": "maelys_mcp_line_reader_t *reader,"
+        },
+        {
+          "line": 108,
+          "text": "maelys_mcp_line_reader_clear(reader);"
+        },
+        {
+          "line": 136,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 137,
+          "text": "maelys_mcp_result_t initialized = maelys_mcp_line_reader_init("
+        },
+        {
+          "line": 143,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 148,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 166,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 191,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_next("
+        },
+        {
+          "line": 215,
+          "text": "status = maelys_mcp_line_reader_read_once("
+        }
+      ],
+      "path": "src/transport/stdio.c",
+      "sha256": "d52619915a1e4022064f5a20985193beb46f293e4bd4bdba25c88ed4e50a95be",
+      "test_only": false
+    },
+    {
+      "hits": [
+        {
+          "line": 120,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 121,
+          "text": "if (maelys_mcp_line_reader_init(&reader, 65536u) != MAELYS_MCP_OK) {"
+        },
+        {
+          "line": 128,
+          "text": "if (maelys_mcp_line_reader_read(&reader, child->peer_fd, &message,"
+        },
+        {
+          "line": 155,
+          "text": "(void)maelys_mcp_write_json_line_with_timeout(child->peer_fd,"
+        },
+        {
+          "line": 164,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 171,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 172,
+          "text": "if (maelys_mcp_line_reader_init(&reader, 65536u) != MAELYS_MCP_OK) {"
+        },
+        {
+          "line": 179,
+          "text": "if (maelys_mcp_line_reader_read(&reader, child->peer_fd, &message,"
+        },
+        {
+          "line": 211,
+          "text": "(void)maelys_mcp_write_json_line_with_timeout(child->peer_fd,"
+        },
+        {
+          "line": 219,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        }
+      ],
+      "path": "tests/helpers/host_launcher_stub.c",
+      "sha256": "6af674ccdbc45993dc92cca9a503c5023e72ceb5bd5dc2136b92c0fa245bad4a",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 37,
+          "text": "static void clear(maelys_mcp_jsonrpc_core_t *core, recorder_t *recorder) {"
+        },
+        {
+          "line": 38,
+          "text": "maelys_mcp_jsonrpc_core_clear(core);"
+        },
+        {
+          "line": 49,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 50,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_init(&reader, 128u) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 52,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, fds[0], &value, NULL) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 56,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, fds[0], &value, NULL) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 59,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, fds[0], &value, NULL) == MAELYS_MCP_ERR_NOT_FOUND);"
+        },
+        {
+          "line": 60,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 66,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 68,
+          "text": "maelys_mcp_jsonrpc_options_t valid = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 69,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(NULL, &valid) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 70,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, NULL) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 72,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &valid) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 75,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &valid) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 76,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_finish(NULL) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 81,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 83,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 84,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 85,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, \"{\\\"a\\\":\", 5) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 86,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_has_buffered_bytes(&core));"
+        },
+        {
+          "line": 88,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, tail, strlen(tail)) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 91,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_finish(&core) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 101,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 103,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 104,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 105,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, invalid[index], strlen(invalid[index])) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 113,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 115,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 117,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 118,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, \"{\\\"x\\\":1}\\n\", strlen(\"{\\\"x\\\":1}\\n\")) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 123,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 124,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, \"12345678\", 8) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 125,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_finish(&core) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 131,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 133,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 134,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 135,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, \"{}\\n\", 3) == MAELYS_MCP_ERR_IO);"
+        },
+        {
+          "line": 142,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 144,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_CONTENT_LENGTH);"
+        },
+        {
+          "line": 145,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 148,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, frames + index, 1) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 152,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_finish(&core) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 158,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 160,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_CONTENT_LENGTH);"
+        },
+        {
+          "line": 161,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 162,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, frame, strlen(frame)) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 189,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 191,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_CONTENT_LENGTH);"
+        },
+        {
+          "line": 193,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 195,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, oversized, strlen(oversized)) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 201,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 203,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_CONTENT_LENGTH);"
+        },
+        {
+          "line": 205,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 206,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, \"123456789\", 9) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 211,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 213,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, partial, strlen(partial)) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 214,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_finish(&core) == MAELYS_MCP_ERR_PROTOCOL);"
+        },
+        {
+          "line": 221,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 222,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 225,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 228,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_serialize(&core, message, &frame, &length) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 235,
+          "text": "value.framing = MAELYS_MCP_JSONRPC_CONTENT_LENGTH;"
+        },
+        {
+          "line": 236,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 237,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_serialize(&core, message, &frame, &length) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 249,
+          "text": "maelys_mcp_jsonrpc_core_t core;"
+        },
+        {
+          "line": 250,
+          "text": "maelys_mcp_jsonrpc_options_t value = options(&recorder, MAELYS_MCP_JSONRPC_JSON_LINES);"
+        },
+        {
+          "line": 251,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_init(&core, &value) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 252,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(NULL, NULL, 0) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 253,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, NULL, 1) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 254,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_feed(&core, NULL, 0) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 258,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_serialize(NULL, message, &bytes, &length) == MAELYS_MCP_ERR_ARGUMENT);"
+        },
+        {
+          "line": 260,
+          "text": "ASSERT_TRUE(maelys_mcp_jsonrpc_core_serialize(&core, message, &bytes, &length) == MAELYS_MCP_ERR_ARGUMENT);"
+        }
+      ],
+      "path": "tests/test_jsonrpc_core.c",
+      "sha256": "7df4d16032ebfecf02f8bd2ff6a0dbe02f9d249d65c42ed063128bca758c8212",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 101,
+          "text": "(void)maelys_mcp_write_json_line_with_timeout(child->peer_fd, response,"
+        },
+        {
+          "line": 111,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 112,
+          "text": "if (maelys_mcp_line_reader_init(&reader, 65536u) != MAELYS_MCP_OK) {"
+        },
+        {
+          "line": 119,
+          "text": "if (maelys_mcp_line_reader_read(&reader, child->peer_fd, &message,"
+        },
+        {
+          "line": 167,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        }
+      ],
+      "path": "tests/test_launcher_entry_points.c",
+      "sha256": "a2ccea6d9c8a588439fda95f3f6a48eca5e41adec5dcdeb71c3f2099468d18b4",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 362,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 363,
+          "text": "if (maelys_mcp_line_reader_init(&reader, 65536u) != MAELYS_MCP_OK) {"
+        },
+        {
+          "line": 370,
+          "text": "if (maelys_mcp_line_reader_read(&reader, child->peer_fd, &message,"
+        },
+        {
+          "line": 412,
+          "text": "(void)maelys_mcp_write_json_line_with_timeout(child->peer_fd,"
+        },
+        {
+          "line": 419,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 444,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 445,
+          "text": "if (maelys_mcp_line_reader_init(&reader, 65536u) != MAELYS_MCP_OK) {"
+        },
+        {
+          "line": 452,
+          "text": "if (maelys_mcp_line_reader_read(&reader, child->peer_fd, &message,"
+        },
+        {
+          "line": 486,
+          "text": "(void)maelys_mcp_write_json_line_with_timeout(child->peer_fd,"
+        },
+        {
+          "line": 492,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 1175,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, goodbye) =="
+        },
+        {
+          "line": 1622,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 1623,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_init(&reader, 65536u) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 1629,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, describe) =="
+        },
+        {
+          "line": 1633,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 1648,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, call) =="
+        },
+        {
+          "line": 1652,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 1667,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, goodbye) =="
+        },
+        {
+          "line": 1671,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 1675,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 1740,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 1741,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_init(&reader, 65536u) == MAELYS_MCP_OK);"
+        },
+        {
+          "line": 1762,
+          "text": "maelys_mcp_result_t status = maelys_mcp_line_reader_read(&reader,"
+        },
+        {
+          "line": 1768,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        },
+        {
+          "line": 2170,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, goodbye) =="
+        },
+        {
+          "line": 2319,
+          "text": "maelys_mcp_line_reader_t reader;"
+        },
+        {
+          "line": 2320,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_init(&reader, 65536u) =="
+        },
+        {
+          "line": 2326,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, describe) =="
+        },
+        {
+          "line": 2330,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 2341,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, call) =="
+        },
+        {
+          "line": 2345,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 2391,
+          "text": "ASSERT_TRUE(maelys_mcp_write_json_line(slot.protocol_fd, goodbye) =="
+        },
+        {
+          "line": 2395,
+          "text": "ASSERT_TRUE(maelys_mcp_line_reader_read(&reader, slot.protocol_fd,"
+        },
+        {
+          "line": 2399,
+          "text": "maelys_mcp_line_reader_clear(&reader);"
+        }
+      ],
+      "path": "tests/test_process_launcher.c",
+      "sha256": "90f1fbf6f701287142f47ab5dc4c2ae34fba374f754c2517cd2ee9fafc007405",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 290,
+          "text": "json_t *value = json_loadb(line, (size_t)length, JSON_REJECT_DUPLICATES, &error);"
+        }
+      ],
+      "path": "tests/test_provider_sdk.c",
+      "sha256": "2c5fdffe28810bc53da50407a02f52c7779b4c18e1a0a87ef33cc92c2a3c5497",
+      "test_only": true
+    },
+    {
+      "hits": [
+        {
+          "line": 23,
+          "text": "return json_loads(text, JSON_REJECT_DUPLICATES, &error);"
+        },
+        {
+          "line": 160,
+          "text": "JSON_REJECT_DUPLICATES, &parse_error);"
+        }
+      ],
+      "path": "tests/test_schema.c",
+      "sha256": "3b63d4d895247f49bdfca42c93da384d8f96ca69f8a134c455ea42718aa3ccc5",
+      "test_only": true
+    }
+  ],
+  "references": {
+    "codexmanager": "600eb5563af947dbdf54d724e9465dcb1472f58f",
+    "maelys-json": "d106890b02b3fbfd599ecd22bdeffb600db66123",
+    "maelys-mcp": "b408231d0b9e61b53df0d59dc49be2e4184ebf3a",
+    "maelys-release": "8623b3cb8bc432111275170b81eedb63635747d2"
+  },
+  "schema_version": 1
+}

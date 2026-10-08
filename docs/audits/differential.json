@@ -1,0 +1,25 @@
+{
+  "chunk_invariance": "byte_for_byte_documents_order_errors_stats_and_finish",
+  "corpus_present": true,
+  "exceptions": [
+    {
+      "classified": 3,
+      "codex": 0,
+      "equal_codex": 0,
+      "equal_mcp": 0,
+      "json_minor": 3,
+      "jsonrpc": 3,
+      "line": 1,
+      "mcp": 0,
+      "path": "tests/corpus/gemini-acp/gemini-002-server-to-client.jsonl",
+      "reason": "SYNTAX",
+      "source": "gemini-acp",
+      "why": 4,
+      "writer": 9
+    }
+  ],
+  "failures": [],
+  "lines": 742,
+  "streams": 123,
+  "verified_streams": 123
+}

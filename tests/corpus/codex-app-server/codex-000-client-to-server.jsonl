@@ -1,0 +1,8 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"jsonrpc-corpus","version":"0"},"capabilities":{"experimentalApi":true}}}
+{"method":"initialized"}
+{"id":2,"method":"thread/list","params":{"cwd":"/private/tmp/jsonrpc-corpus-synthetic","limit":1}}
+{"id":3,"method":"thread/start","params":{"cwd":"/private/tmp/jsonrpc-corpus-synthetic","ephemeral":true,"approvalPolicy":"untrusted","sandbox":"read-only","baseInstructions":"Synthetic protocol test. Do not read private files or histories."}}
+{"id":4,"method":"thread/read","params":{"threadId":"01a11b89-0802-7433-aa18-e8a58a763fc4","includeTurns":false}}
+{"id":5,"method":"turn/start","params":{"threadId":"01a11b89-0802-7433-aa18-e8a58a763fc4","input":[{"type":"text","text":"Synthetic protocol test: request an approval to run touch /private/tmp/jsonrpc-corpus-approval-probe with escalated permissions. Do not read files. I will decline. Stop after the refusal.","text_elements":[]}]}}
+{"id":0,"result":{"decision":"decline"}}
+{"id":6,"method":"thread/close","params":{"threadId":"01a11b89-0802-7433-aa18-e8a58a763fc4"}}

@@ -1,0 +1,6 @@
+{"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2025-11-25","capabilities":{"tools":{}},"serverInfo":{"name":"legacy-upstream","version":"1"}}}
+{"jsonrpc":"2.0","id":2,"result":{"supportedVersions":["2026-07-28","2025-11-25"],"capabilities":{"tools":{}}}}
+{"jsonrpc":"2.0","id":3,"result":{"tools":[{"name":"proxy.probe","title":"Fixture tool","description":"A fixture upstream tool.","inputSchema":{"type":"object"}}]}}
+{"jsonrpc":"2.0","method":"notifications/message","params":{"level":"info","data":"noise"}}
+{"jsonrpc":"2.0","id":9001,"method":"sampling/createMessage","params":{}}
+{"jsonrpc":"2.0","id":4,"result":{"content":[{"type":"text","text":"chatty-unrefused"}]}}

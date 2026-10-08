@@ -1,0 +1,44 @@
+# typed: strict
+# frozen_string_literal: true
+# SPDX-License-Identifier: MPL-2.0
+class LibmaelysJsonrpc < Formula
+  desc "Bounded JSON-RPC 2.0 documents and request correlation for C11"
+  homepage "https://github.com/maelys-dev/maelys-jsonrpc"
+  url "@URL@"
+  sha256 "@SHA256@"
+  license "MPL-2.0"
+
+  depends_on "cmake" => :build
+  depends_on "pkgconf" => :test
+  depends_on "maelys-dev/tap/libmaelys-json"
+
+  def install
+    system "cmake", "-S", ".", "-B", "build", *std_cmake_args,
+           "-DMAELYS_JSONRPC_BUILD_TESTS=OFF", "-DMAELYS_JSONRPC_WERROR=ON",
+           "-DMAELYS_JSON_DIR=#{Formula["libmaelys-json"].opt_prefix}",
+           "-DCMAKE_PREFIX_PATH=#{Formula["libmaelys-json"].opt_prefix}"
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
+  end
+
+  test do
+    (testpath/"smoke.c").write <<~EOS
+      #include <maelys/jsonrpc.h>
+      int main(void) {
+        maelys_json_document_t *doc = 0;
+        maelys_jsonrpc_message_t message;
+        const char text[] = "{\\"jsonrpc\\":\\"2.0\\",\\"method\\":\\"probe\\"}";
+        if (maelys_jsonrpc_parse(text, sizeof text - 1, 0, &doc, 0)) return 1;
+        int bad = maelys_jsonrpc_classify(doc, 0, &message) ||
+                  message.kind != MAELYS_JSONRPC_NOTIFICATION;
+        maelys_json_document_release(doc);
+        return bad;
+      }
+    EOS
+    system ENV.cc, "-std=c11", "smoke.c", "-I#{include}",
+           "-I#{Formula["libmaelys-json"].opt_include}", "-L#{lib}", "-lmaelys-jsonrpc",
+           "-L#{Formula["libmaelys-json"].opt_lib}", "-lmaelys-json", "-o", "smoke"
+    system "./smoke"
+    assert_match "maelys-json", shell_output("pkg-config --print-requires --with-path=#{lib}/pkgconfig maelys-jsonrpc")
+  end
+end

@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "directive_revision": "2.2",
+  "minimum_streams": {"mcp-stdio": 50, "codex-app-server": 50, "gemini-acp": 20},
+  "manifests": ["mcp-stdio/MANIFEST.json", "codex-app-server/MANIFEST.json", "gemini-acp/MANIFEST.json"],
+  "policy": "raw bytes admitted before writing; executable Gemini fixtures when CLI absent"
+}

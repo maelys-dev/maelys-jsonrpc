@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: MPL-2.0
+prefix=@PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: maelys-jsonrpc
+Description: Bounded JSON-RPC 2.0 framing, messages and correlation
+Version: @VERSION@
+Requires: maelys-json >= 0.3.0
+Libs: -L${libdir} -lmaelys-jsonrpc
+Cflags: -I${includedir}

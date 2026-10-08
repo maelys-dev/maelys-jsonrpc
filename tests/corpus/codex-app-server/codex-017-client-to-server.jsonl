@@ -1,0 +1,6 @@
+{"id":1,"method":"initialize","params":{"clientInfo":{"name":"jsonrpc-corpus","version":"0"},"capabilities":{"experimentalApi":true}}}
+{"method":"initialized"}
+{"id":2,"method":"thread/list","params":{"cwd":"/private/tmp/jsonrpc-corpus-synthetic","limit":1}}
+{"id":3,"method":"thread/start","params":{"cwd":"/private/tmp/jsonrpc-corpus-synthetic","ephemeral":true,"approvalPolicy":"untrusted","sandbox":"read-only","baseInstructions":"Synthetic protocol test. Do not read private files or histories."}}
+{"id":4,"method":"thread/read","params":{"threadId":"01a11b89-3c23-7563-82fd-8f507791ebb5","includeTurns":false}}
+{"id":5,"method":"thread/close","params":{"threadId":"01a11b89-3c23-7563-82fd-8f507791ebb5"}}

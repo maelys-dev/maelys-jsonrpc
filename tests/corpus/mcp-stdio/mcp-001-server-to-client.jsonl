@@ -1,0 +1,5 @@
+{"id":1,"jsonrpc":"2.0","result":{"capabilities":{"prompts":{"listChanged":false},"resources":{"listChanged":false,"subscribe":false},"tools":{"listChanged":false}},"instructions":"A policy-enforced local MCP runtime for explicitly configured providers.","protocolVersion":"2025-11-25","serverInfo":{"name":"maelys-mcp","version":"1.1.1"}}}
+{"id":2,"jsonrpc":"2.0","result":{"tools":[{"_meta":{"org.maelys/toolEffect":"read"},"annotations":{"destructiveHint":false,"readOnlyHint":true},"description":"A fixture tool beside the prompts.","inputSchema":{"type":"object"},"name":"sdk.probe","title":"Probe"}]}}
+{"error":{"code":-32602,"message":"Unknown tool"},"id":3,"jsonrpc":"2.0"}
+{"id":4,"jsonrpc":"2.0","result":{"prompts":[{"description":"A prompt that takes no arguments.","name":"sdk.greeting","title":"Greeting"},{"arguments":[{"description":"File to review.","name":"path","required":true},{"description":"Review style.","name":"style"}],"description":"A prompt with a required argument.","name":"sdk.review","title":"Review"},{"description":"Answers with no messages.","name":"sdk.broken"}]}}
+{"error":{"code":-32602,"message":"Unknown prompt"},"id":5,"jsonrpc":"2.0"}

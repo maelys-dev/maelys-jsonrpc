@@ -1,0 +1,18 @@
+name: ci
+
+# Created by maelys-release v0.63.0 (0.63.0) and owned by this repository: add
+# jobs next to check; adopt keeps the socle line of check current.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    uses: maelys-dev/maelys-release/.github/workflows/check-product.yml@8623b3cb8bc432111275170b81eedb63635747d2 # v0.63.0
+    with:
+      product: maelys-jsonrpc
+      fuzz_command: make fuzz-smoke FUZZ_TIME=30

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: MPL-2.0
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${pcfiledir}/..
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: maelys-jsonrpc
+Description: Bounded JSON-RPC 2.0 framing, messages and correlation
+Version: @PROJECT_VERSION@
+Requires: maelys-json >= 0.3.0
+Libs: -L${libdir} -lmaelys-jsonrpc
+Cflags: -I${includedir}

@@ -1,0 +1,49 @@
+name: release
+
+# Managed by maelys-release v0.63.0 (0.63.0). Regenerate with
+# 'maelys-release adopt' of maelys-release; do not edit by hand.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing signed tag whose release and Homebrew publication are replayed
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    uses: maelys-dev/maelys-release/.github/workflows/release.yml@8623b3cb8bc432111275170b81eedb63635747d2 # v0.63.0
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    with:
+      product: maelys-jsonrpc
+      tag: ${{ inputs.tag || github.ref_name }}
+      dependency_checkout: |
+        sh scripts/checkout-dependencies.sh "$RUNNER_TEMP/dependencies" >>"$GITHUB_ENV"
+      linux_packages: build-essential dpkg-dev file rpm clang libclang-rt-dev cmake pkg-config libjansson-dev
+      macos_packages: llvm cmake pkg-config jansson
+
+  tap-libmaelys-jsonrpc:
+    needs: release
+    if: needs.release.result == 'success'
+    uses: maelys-dev/maelys-release/.github/workflows/tap.yml@8623b3cb8bc432111275170b81eedb63635747d2 # v0.63.0
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    with:
+      product: libmaelys-jsonrpc
+      tag: ${{ inputs.tag || github.ref_name }}
+      bottles: '["macos-15","macos-26"]'
+    secrets:
+      tap_token: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+      tap_signing_key: ${{ secrets.HOMEBREW_TAP_SIGNING_KEY }}
