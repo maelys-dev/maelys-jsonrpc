@@ -63,10 +63,17 @@ maelys_jsonrpc_result_t maelys_jsonrpc_classify(const maelys_json_document_t *do
         MAELYS_JSON_VALUE_NONE, NULL, MAELYS_JSON_VALUE_NONE,
         MAELYS_JSON_VALUE_NONE, MAELYS_JSON_VALUE_NONE};
     *out = invalid;
+    maelys_jsonrpc_dialect_t dialect = limits ? limits->dialect : MAELYS_JSONRPC_DIALECT_STRICT;
+    if (dialect != MAELYS_JSONRPC_DIALECT_STRICT && dialect != MAELYS_JSONRPC_DIALECT_CODEX)
+        return MAELYS_JSONRPC_ARGUMENT;
     maelys_json_value_t root = maelys_json_document_root(doc);
+    if (maelys_json_value_type(doc, root) != MAELYS_JSON_TYPE_OBJECT)
+        return MAELYS_JSONRPC_PROTOCOL;
     maelys_json_view_t version;
-    if (maelys_json_value_type(doc, root) != MAELYS_JSON_TYPE_OBJECT ||
-        maelys_json_object_get_string(doc, root, "jsonrpc", &version) != MAELYS_JSON_OK ||
+    maelys_json_value_t marker = member(doc, root, "jsonrpc");
+    if (marker == MAELYS_JSON_VALUE_NONE) {
+        if (dialect == MAELYS_JSONRPC_DIALECT_STRICT) return MAELYS_JSONRPC_PROTOCOL;
+    } else if (maelys_json_value_string(doc, marker, &version) != MAELYS_JSON_OK ||
         version.size != 3u || memcmp(version.data, "2.0", 3u)) return MAELYS_JSONRPC_PROTOCOL;
     maelys_jsonrpc_message_t message = invalid;
     message.id = member(doc, root, "id");

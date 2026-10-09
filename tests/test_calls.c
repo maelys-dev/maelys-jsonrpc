@@ -8,6 +8,8 @@ void test_calls(void) {
         userdata[i] = (int)i;
         R(maelys_jsonrpc_calls_open(calls, "echo", 0u, 100u - i, &userdata[i], &ids[i]));
         CHECK(ids[i] == (int64_t)i + 1);
+        /* Twin of the id-0 UNKNOWN_ID assertion: the table never emitted 0. */
+        if (!i) CHECK(ids[i] == 1 && ids[i] != 0);
     }
     int64_t untouched = -1;
     CHECK(maelys_jsonrpc_calls_open(calls, "extra", 0u, 100u, NULL, &untouched) == MAELYS_JSONRPC_FULL);
@@ -15,9 +17,10 @@ void test_calls(void) {
     const char *responses[] = {"{\"jsonrpc\":\"2.0\",\"id\":999,\"result\":null}",
         "{\"jsonrpc\":\"2.0\",\"id\":\"1\",\"result\":null}",
         "{\"jsonrpc\":\"2.0\",\"id\":null,\"result\":null}",
-        "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":-1,\"message\":\"x\"}}"};
+        "{\"jsonrpc\":\"2.0\",\"id\":1,\"error\":{\"code\":-1,\"message\":\"x\"}}",
+        "{\"jsonrpc\":\"2.0\",\"id\":0,\"result\":null}"};
     maelys_jsonrpc_call_t returned = {0};
-    for (size_t i = 0u; i < 4u; ++i) {
+    for (size_t i = 0u; i < 5u; ++i) {
         maelys_json_document_t *doc = NULL;
         R(maelys_jsonrpc_parse(responses[i], strlen(responses[i]), NULL, &doc, NULL));
         maelys_jsonrpc_message_t message; R(maelys_jsonrpc_classify(doc, NULL, &message));

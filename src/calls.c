@@ -70,11 +70,6 @@ maelys_jsonrpc_result_t maelys_jsonrpc_calls_settle(maelys_jsonrpc_calls_t *call
     if (!calls || !doc || !message || !out ||
         (message->kind != MAELYS_JSONRPC_RESPONSE && message->kind != MAELYS_JSONRPC_ERROR))
         return MAELYS_JSONRPC_ARGUMENT;
-    maelys_jsonrpc_message_t actual;
-    if (maelys_jsonrpc_classify(doc, NULL, &actual) != MAELYS_JSONRPC_OK ||
-        actual.kind != message->kind || actual.id != message->id ||
-        actual.result != message->result || actual.error != message->error)
-        return MAELYS_JSONRPC_ARGUMENT;
     int64_t id;
     if (maelys_json_value_i64(doc, message->id, &id) != MAELYS_JSON_OK)
         return MAELYS_JSONRPC_UNKNOWN_ID;

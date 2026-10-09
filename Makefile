@@ -21,7 +21,7 @@ JANSSON_CFLAGS = $(shell $(PKG_CONFIG) --cflags jansson)
 JANSSON_LIBS = $(shell $(PKG_CONFIG) --libs jansson)
 SOURCES := src/reader.c src/message.c src/calls.c src/result.c
 HEADERS := $(wildcard include/maelys/*.h include/maelys/jsonrpc/*.h) src/internal.h
-TEST_SOURCES := tests/main.c tests/test_reader.c tests/test_message.c tests/test_calls.c
+TEST_SOURCES := tests/main.c tests/test_reader.c tests/test_message.c tests/test_calls.c tests/test_dialect.c
 OBJECTS := $(SOURCES:src/%.c=$(BUILD)/obj/%.o)
 LIBRARY := $(BUILD)/lib/libmaelys-jsonrpc.a
 JSON_LIBRARY := $(BUILD)/dependency/libmaelys-json.a
@@ -59,7 +59,7 @@ $(TEST): $(TEST_SOURCES) tests/framework.h $(LIBRARY) $(JSON_LIBRARY) $(FLAGS_ST
 	@mkdir -p $(@D)
 	$(CC) $(ALL_CFLAGS) $(TEST_SOURCES) $(LIBRARY) $(JSON_LIBRARY) -o $@
 
-$(DIFF): tests/differential.c $(LIBRARY) $(JSON_LIBRARY) $(FLAGS_STAMP)
+$(DIFF): tests/differential.c tests/classification.h $(LIBRARY) $(JSON_LIBRARY) $(FLAGS_STAMP)
 	@mkdir -p $(@D)
 	$(CC) $(ALL_CFLAGS) $(JANSSON_CFLAGS) $< $(LIBRARY) $(JSON_LIBRARY) $(JANSSON_LIBS) -o $@
 
@@ -74,6 +74,7 @@ $(PC): pkgconfig/maelys-jsonrpc.pc.in VERSION
 test: $(TEST) $(DIFF) $(CORPUS_READER)
 	$(TEST)
 	$(PYTHON) tests/test_capture.py
+	$(PYTHON) tests/test_corpus_reader.py --reader $(CORPUS_READER)
 	$(PYTHON) tools/run-differential.py --executable $(DIFF) --reader $(CORPUS_READER) --corpus tests/corpus --report $(BUILD)/differential.json
 
 check:
@@ -125,9 +126,9 @@ $(BUILD)/audit-dependency: tests/audit/dependency.c $(JSON_LIBRARY) force
 	$(CC) $(AUDIT_FLAGS) -I$(MAELYS_JSON_DIR)/include $(JANSSON_CFLAGS) \
 		$< $(JSON_LIBRARY) $(JANSSON_LIBS) -o $@
 
-$(BUILD)/audit-line: tests/audit/line.c $(JSON_LIBRARY) force
-	$(CC) $(AUDIT_FLAGS) -I$(MAELYS_JSON_DIR)/include $(JANSSON_CFLAGS) \
-		$< $(JSON_LIBRARY) $(JANSSON_LIBS) -o $@
+$(BUILD)/audit-line: tests/audit/line.c tests/classification.h $(LIBRARY) $(JSON_LIBRARY) force
+	$(CC) $(AUDIT_FLAGS) $(INCLUDES) $(JANSSON_CFLAGS) \
+		$< $(LIBRARY) $(JSON_LIBRARY) $(JANSSON_LIBS) -o $@
 
 audit: $(BUILD)/audit-dependency $(BUILD)/audit-line
 	$(BUILD)/audit-dependency

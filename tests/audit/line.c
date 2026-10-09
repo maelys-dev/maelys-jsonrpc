@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: MPL-2.0 */
 /* Audit one bounded line; never prints agent content or diagnostic excerpts. */
-#include <maelys/json.h>
+#include "../classification.h"
 #include <jansson.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -101,7 +101,27 @@ int main(void) {
             json_decref(roundtrip);
         }
     }
-    printf("{\"parse\":\"%s\",\"offset\":%zu,\"codex_accepted\":%s,"
+    maelys_jsonrpc_message_t strict = {.kind = MAELYS_JSONRPC_INVALID};
+    maelys_jsonrpc_message_t classified = {.kind = MAELYS_JSONRPC_INVALID};
+    maelys_jsonrpc_limits_t codex_limits = {.dialect = MAELYS_JSONRPC_DIALECT_CODEX};
+    int missing = 0;
+    if (doc) {
+        (void)maelys_jsonrpc_classify(doc, NULL, &strict);
+        (void)maelys_jsonrpc_classify(doc, &codex_limits, &classified);
+        maelys_json_value_t marker = MAELYS_JSON_VALUE_NONE;
+        maelys_json_value_t root = maelys_json_document_root(doc);
+        if (maelys_json_value_type(doc, root) == MAELYS_JSON_TYPE_OBJECT) {
+            (void)maelys_json_object_get(doc, root, "jsonrpc", &marker);
+            missing = marker == MAELYS_JSON_VALUE_NONE;
+        }
+    }
+    printf("{\"classified_strict\":\"%s\",\"classified_codex\":\"%s\","
+        "\"classification_equal_strict\":%s,\"classification_equal_codex\":%s,\"missing_version\":%s,",
+        kind_name(strict.kind), kind_name(classified.kind),
+        strict.kind == legacy_kind(mcp, MAELYS_JSONRPC_DIALECT_STRICT) ? "true" : "false",
+        classified.kind == legacy_kind(codex, MAELYS_JSONRPC_DIALECT_CODEX) ? "true" : "false",
+        missing ? "true" : "false");
+    printf("\"parse\":\"%s\",\"offset\":%zu,\"codex_accepted\":%s,"
         "\"mcp_accepted\":%s,\"writer\":\"%s\",\"non_integer_numbers\":%zu,"
         "\"non_integer_id\":%s,\"non_integer_error_code\":%s,"
         "\"equal_codex\":%s,\"equal_mcp\":%s}\n",

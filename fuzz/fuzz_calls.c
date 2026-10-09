@@ -36,7 +36,9 @@ int LLVMFuzzerTestOneInput(const unsigned char *data, size_t size) {
                 size_t n = size - i < 4096u ? size - i : 4096u;
                 if (maelys_jsonrpc_parse(data + i, n, &limits, &doc, NULL) == MAELYS_JSONRPC_OK) {
                     maelys_jsonrpc_message_t message;
-                    if (maelys_jsonrpc_classify(doc, NULL, &message) == MAELYS_JSONRPC_OK &&
+                    maelys_jsonrpc_limits_t profile = {.dialect = (data[0] & 16u) ?
+                        MAELYS_JSONRPC_DIALECT_CODEX : MAELYS_JSONRPC_DIALECT_STRICT};
+                    if (maelys_jsonrpc_classify(doc, &profile, &message) == MAELYS_JSONRPC_OK &&
                         (message.kind == MAELYS_JSONRPC_RESPONSE || message.kind == MAELYS_JSONRPC_ERROR)) {
                         r = maelys_jsonrpc_calls_settle(calls, doc, &message, &out);
                         if (r == MAELYS_JSONRPC_OK) { if (!active) abort(); --active; }

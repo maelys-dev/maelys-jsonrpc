@@ -6,6 +6,7 @@ static void stats_equal(const maelys_jsonrpc_reader_stats_t *a, const maelys_jso
     CHECK(a->blank_lines == b->blank_lines); CHECK(a->preamble_lines == b->preamble_lines);
     CHECK(a->line_overflows == b->line_overflows); CHECK(a->rejected_lines == b->rejected_lines);
     CHECK(a->documents == b->documents); CHECK(a->stream_started == b->stream_started);
+    CHECK(a->missing_version == b->missing_version);
 }
 
 static void chunk_invariance(void) {
@@ -141,6 +142,7 @@ static void many_invalid(void) {
     }
     maelys_jsonrpc_reader_stats_t stats; maelys_jsonrpc_reader_stats(reader, &stats);
     CHECK(stats.documents == 10000u && stats.rejected_lines == 0u);
+    CHECK(stats.missing_version == 10000u);
     R(maelys_jsonrpc_reader_finish(reader)); maelys_jsonrpc_reader_release(&reader);
 }
 

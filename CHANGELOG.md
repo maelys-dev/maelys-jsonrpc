@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.2.0 — 2026-10-09
+
+- Add the CODEX read dialect for envelopes without a jsonrpc member; STRICT
+  remains the default for NULL and zero-initialized limits.
+- Count accepted object documents without the version member in reader stats.
+- Settle caller-classified responses without a second envelope classification.
+- Extend corpus differential checks to classification by protocol, call
+  settlement and both dialects; retain named parsing exceptions.
+- Public structure additions raise the library ABI to 2; layout and source
+  compatibility tests preserve the existing zero/NULL caller behavior.
+
+### Décisions
+
+- Tolerance is read-only and counted; present jsonrpc must still equal "2.0".
+  Writers always emit "2.0". STRICT remains the default.
+- Harness (app-server client) and cx (WebSocket daemon) consume the CODEX dialect.
+- Calls API and integer ID rules are unchanged. Classification decides the
+  dialect once; settle checks only response/error kind, integer ID and membership.
+- Corpus responses with ID 0 come from a capture client not built on calls.
+  A calls client cannot emit them: IDs start at 1. UNKNOWN_ID means the table
+  never emitted that ID, not special treatment of zero. Replay uses one table
+  per stream, counts duplicate responses, cancels leftovers and loses no entries.
+- Content-Length still has no named live consumer and remains excluded.
+
 ## 0.1.0 — 2026-10-08
 
 - Socle generated with maelys-release v0.63.0; maelys-json pinned at v0.3.0

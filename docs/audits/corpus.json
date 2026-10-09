@@ -1,4 +1,5 @@
 {
+  "classification_profile_revision": "0.2.0",
   "corpus_prerequisite": "declared_and_measured",
   "counts": {
     "codex-app-server": 52,
@@ -16,6 +17,14 @@
     {
       "blank_lines": 0,
       "bytes": 1086,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 6,
+        "RESPONSE": 1
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 333,
@@ -39,6 +48,15 @@
     {
       "blank_lines": 0,
       "bytes": 17633,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 29,
+        "REQUEST": 1,
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "INVALID": 36
+      },
       "exceptions": [],
       "lines": 36,
       "max_line_bytes": 4122,
@@ -62,6 +80,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -85,6 +110,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -108,6 +141,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -131,6 +171,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -154,6 +202,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -177,6 +232,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -200,6 +263,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -223,6 +293,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -246,6 +324,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -269,6 +354,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -292,6 +385,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -315,6 +415,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -338,6 +446,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -361,6 +476,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -384,6 +507,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -407,6 +537,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -430,6 +568,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -453,6 +598,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -476,6 +629,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -499,6 +659,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -522,6 +690,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -545,6 +720,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -568,6 +751,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -591,6 +781,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -614,6 +812,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -637,6 +842,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -660,6 +873,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -683,6 +903,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -706,6 +934,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -729,6 +964,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -752,6 +995,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -775,6 +1025,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -798,6 +1056,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -821,6 +1086,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -844,6 +1117,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -867,6 +1147,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -890,6 +1178,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -913,6 +1208,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -936,6 +1239,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -959,6 +1269,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -982,6 +1300,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -1005,6 +1330,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -1028,6 +1361,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -1051,6 +1391,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -1074,6 +1422,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -1097,6 +1452,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -1120,6 +1483,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -1143,6 +1513,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -1166,6 +1544,13 @@
     {
       "blank_lines": 0,
       "bytes": 711,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "INVALID": 6
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 243,
@@ -1189,6 +1574,14 @@
     {
       "blank_lines": 0,
       "bytes": 7962,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "INVALID": 8
+      },
       "exceptions": [],
       "lines": 8,
       "max_line_bytes": 4122,
@@ -1212,6 +1605,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1235,6 +1634,14 @@
     {
       "blank_lines": 0,
       "bytes": 556,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1258,6 +1665,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1281,6 +1694,14 @@
     {
       "blank_lines": 0,
       "bytes": 556,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1304,6 +1725,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1327,6 +1754,14 @@
     {
       "blank_lines": 0,
       "bytes": 583,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 196,
@@ -1350,6 +1785,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1373,6 +1814,14 @@
     {
       "blank_lines": 0,
       "bytes": 492,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1396,6 +1845,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1419,6 +1874,14 @@
     {
       "blank_lines": 0,
       "bytes": 451,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1442,6 +1905,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1465,6 +1934,16 @@
     {
       "blank_lines": 0,
       "bytes": 572,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "NOTIFICATION": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1488,6 +1967,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1511,6 +1996,14 @@
     {
       "blank_lines": 0,
       "bytes": 524,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1534,6 +2027,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1557,6 +2056,16 @@
     {
       "blank_lines": 0,
       "bytes": 573,
+      "classified_codex": {
+        "ERROR": 1,
+        "NOTIFICATION": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "NOTIFICATION": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 196,
@@ -1580,6 +2089,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1603,6 +2118,14 @@
     {
       "blank_lines": 0,
       "bytes": 377,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 160,
@@ -1626,6 +2149,12 @@
     {
       "blank_lines": 0,
       "bytes": 574,
+      "classified_codex": {
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 154,
@@ -1649,6 +2178,14 @@
     {
       "blank_lines": 0,
       "bytes": 893,
+      "classified_codex": {
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 3,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 7,
       "max_line_bytes": 177,
@@ -1672,6 +2209,14 @@
     {
       "blank_lines": 0,
       "bytes": 586,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -1695,6 +2240,12 @@
     {
       "blank_lines": 0,
       "bytes": 2204,
+      "classified_codex": {
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "RESPONSE": 5
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 1209,
@@ -1718,6 +2269,14 @@
     {
       "blank_lines": 0,
       "bytes": 586,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -1741,6 +2300,14 @@
     {
       "blank_lines": 0,
       "bytes": 1178,
+      "classified_codex": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 419,
@@ -1764,6 +2331,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -1787,6 +2362,14 @@
     {
       "blank_lines": 0,
       "bytes": 475,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 164,
@@ -1810,6 +2393,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -1833,6 +2424,16 @@
     {
       "blank_lines": 0,
       "bytes": 682,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 164,
@@ -1856,6 +2457,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -1879,6 +2488,12 @@
     {
       "blank_lines": 0,
       "bytes": 662,
+      "classified_codex": {
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 319,
@@ -1902,6 +2517,14 @@
     {
       "blank_lines": 0,
       "bytes": 586,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -1925,6 +2548,12 @@
     {
       "blank_lines": 0,
       "bytes": 2204,
+      "classified_codex": {
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "RESPONSE": 5
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 1209,
@@ -1948,6 +2577,14 @@
     {
       "blank_lines": 0,
       "bytes": 586,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -1971,6 +2608,14 @@
     {
       "blank_lines": 0,
       "bytes": 1178,
+      "classified_codex": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 419,
@@ -1994,6 +2639,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2017,6 +2670,14 @@
     {
       "blank_lines": 0,
       "bytes": 475,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 164,
@@ -2040,6 +2701,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2063,6 +2732,16 @@
     {
       "blank_lines": 0,
       "bytes": 682,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 164,
@@ -2086,6 +2765,14 @@
     {
       "blank_lines": 0,
       "bytes": 493,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2109,6 +2796,12 @@
     {
       "blank_lines": 0,
       "bytes": 662,
+      "classified_codex": {
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 319,
@@ -2132,6 +2825,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2155,6 +2856,12 @@
     {
       "blank_lines": 0,
       "bytes": 2206,
+      "classified_codex": {
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "RESPONSE": 5
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 1209,
@@ -2178,6 +2885,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2201,6 +2916,14 @@
     {
       "blank_lines": 0,
       "bytes": 1178,
+      "classified_codex": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 419,
@@ -2224,6 +2947,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2247,6 +2978,14 @@
     {
       "blank_lines": 0,
       "bytes": 475,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 164,
@@ -2270,6 +3009,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2293,6 +3040,16 @@
     {
       "blank_lines": 0,
       "bytes": 682,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 164,
@@ -2316,6 +3073,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2339,6 +3104,12 @@
     {
       "blank_lines": 0,
       "bytes": 662,
+      "classified_codex": {
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 319,
@@ -2362,6 +3133,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2385,6 +3164,12 @@
     {
       "blank_lines": 0,
       "bytes": 2206,
+      "classified_codex": {
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "RESPONSE": 5
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 1209,
@@ -2408,6 +3193,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2431,6 +3224,14 @@
     {
       "blank_lines": 0,
       "bytes": 1178,
+      "classified_codex": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 419,
@@ -2454,6 +3255,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2477,6 +3286,14 @@
     {
       "blank_lines": 0,
       "bytes": 475,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 164,
@@ -2500,6 +3317,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2523,6 +3348,16 @@
     {
       "blank_lines": 0,
       "bytes": 682,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 164,
@@ -2546,6 +3381,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2569,6 +3412,12 @@
     {
       "blank_lines": 0,
       "bytes": 662,
+      "classified_codex": {
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 319,
@@ -2592,6 +3441,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2615,6 +3472,12 @@
     {
       "blank_lines": 0,
       "bytes": 2206,
+      "classified_codex": {
+        "RESPONSE": 5
+      },
+      "classified_strict": {
+        "RESPONSE": 5
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 1209,
@@ -2638,6 +3501,14 @@
     {
       "blank_lines": 0,
       "bytes": 587,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 5
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 159,
@@ -2661,6 +3532,14 @@
     {
       "blank_lines": 0,
       "bytes": 1178,
+      "classified_codex": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 2,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 419,
@@ -2684,6 +3563,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2707,6 +3594,14 @@
     {
       "blank_lines": 0,
       "bytes": 475,
+      "classified_codex": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
+      "classified_strict": {
+        "ERROR": 1,
+        "RESPONSE": 3
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 164,
@@ -2730,6 +3625,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2753,6 +3656,16 @@
     {
       "blank_lines": 0,
       "bytes": 682,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 1,
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 6,
       "max_line_bytes": 164,
@@ -2776,6 +3689,14 @@
     {
       "blank_lines": 0,
       "bytes": 494,
+      "classified_codex": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
+      "classified_strict": {
+        "NOTIFICATION": 1,
+        "REQUEST": 4
+      },
       "exceptions": [],
       "lines": 5,
       "max_line_bytes": 159,
@@ -2799,6 +3720,12 @@
     {
       "blank_lines": 0,
       "bytes": 662,
+      "classified_codex": {
+        "RESPONSE": 4
+      },
+      "classified_strict": {
+        "RESPONSE": 4
+      },
       "exceptions": [],
       "lines": 4,
       "max_line_bytes": 319,
@@ -2822,6 +3749,12 @@
     {
       "blank_lines": 0,
       "bytes": 59,
+      "classified_codex": {
+        "REQUEST": 1
+      },
+      "classified_strict": {
+        "REQUEST": 1
+      },
       "exceptions": [],
       "lines": 1,
       "max_line_bytes": 58,

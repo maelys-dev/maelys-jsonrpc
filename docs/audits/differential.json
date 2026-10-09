@@ -1,14 +1,95 @@
 {
-  "chunk_invariance": "byte_for_byte_documents_order_errors_stats_and_finish",
+  "chunk_invariance": "byte_for_byte_documents_order_errors_stats_classification_and_finish",
+  "classification": {
+    "codex-app-server": {
+      "classified_codex": {
+        "accepted": 394,
+        "invalid": 0
+      },
+      "classified_strict": {
+        "accepted": 0,
+        "invalid": 394
+      },
+      "correlation": {
+        "cancelled": 131,
+        "duplicate_responses": 0,
+        "invalid_argument": 132,
+        "opened": 262,
+        "release_lost": 0,
+        "settled": 131,
+        "unknown_zero": 1
+      },
+      "documents": 394,
+      "missing_version": 394,
+      "streams": 52
+    },
+    "gemini-acp": {
+      "classified_codex": {
+        "accepted": 91,
+        "invalid": 0
+      },
+      "classified_strict": {
+        "accepted": 91,
+        "invalid": 0
+      },
+      "correlation": {
+        "cancelled": 0,
+        "duplicate_responses": 0,
+        "invalid_argument": 0,
+        "opened": 0,
+        "release_lost": 0,
+        "settled": 0,
+        "unknown_zero": 0
+      },
+      "documents": 91,
+      "missing_version": 0,
+      "streams": 20
+    },
+    "mcp-stdio": {
+      "classified_codex": {
+        "accepted": 256,
+        "invalid": 0
+      },
+      "classified_strict": {
+        "accepted": 256,
+        "invalid": 0
+      },
+      "correlation": {
+        "cancelled": 0,
+        "duplicate_responses": 0,
+        "invalid_argument": 0,
+        "opened": 0,
+        "release_lost": 0,
+        "settled": 0,
+        "unknown_zero": 0
+      },
+      "documents": 256,
+      "missing_version": 0,
+      "streams": 51
+    }
+  },
   "corpus_present": true,
+  "correlation_policy": {
+    "calls_client_can_emit_zero": false,
+    "duplicate_responses": "UNKNOWN_ID_after_first_settlement",
+    "open_sequence": "1..maximum_integer_id_in_stream",
+    "shutdown": "cancel_until_AGAIN_then_release_returns_zero",
+    "table_scope": "one_per_descriptor_stream",
+    "zero_id_origin": "capture_client_not_built_on_calls",
+    "zero_id_reason": "never_emitted_by_this_table_not_a_special_id"
+  },
   "exceptions": [
     {
+      "classification_equal": 1,
       "classified": 3,
+      "classified_codex": "INVALID",
+      "classified_strict": "INVALID",
       "codex": 0,
       "equal_codex": 0,
       "equal_mcp": 0,
       "json_minor": 3,
       "jsonrpc": 3,
+      "legacy_classified": "INVALID",
       "line": 1,
       "mcp": 0,
       "path": "tests/corpus/gemini-acp/gemini-002-server-to-client.jsonl",
