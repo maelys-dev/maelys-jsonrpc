@@ -32,11 +32,17 @@ static void classify_cases(void) {
         maelys_jsonrpc_result_t r = maelys_jsonrpc_classify(doc, NULL, &message);
         CHECK(r == (cases[i].kind == MAELYS_JSONRPC_INVALID ? MAELYS_JSONRPC_PROTOCOL : MAELYS_JSONRPC_OK));
         CHECK(message.kind == cases[i].kind);
+        maelys_jsonrpc_limits_t codex = {.dialect = MAELYS_JSONRPC_DIALECT_CODEX};
+        maelys_jsonrpc_message_t other;
+        CHECK(maelys_jsonrpc_classify(doc, &codex, &other) == r);
+        CHECK(other.kind == message.kind && other.id == message.id && other.method == message.method);
+        CHECK(other.params == message.params && other.result == message.result && other.error == message.error);
         if (message.kind == MAELYS_JSONRPC_NOTIFICATION) CHECK(message.id == MAELYS_JSON_VALUE_NONE);
         maelys_json_document_release(doc);
     }
     maelys_json_document_t *doc = parse("{\"jsonrpc\":\"2.0\",\"method\":\"abcd\"}");
-    maelys_jsonrpc_limits_t limits = {3u, 1u}; maelys_jsonrpc_message_t message;
+    maelys_jsonrpc_limits_t limits = {.max_method_length = 3u, .max_error_excerpt = 1u};
+    maelys_jsonrpc_message_t message;
     CHECK(maelys_jsonrpc_classify(doc, &limits, &message) == MAELYS_JSONRPC_PROTOCOL);
     maelys_json_document_release(doc);
 }

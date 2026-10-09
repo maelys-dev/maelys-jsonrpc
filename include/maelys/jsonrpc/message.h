@@ -11,9 +11,14 @@ typedef enum maelys_jsonrpc_kind {
     MAELYS_JSONRPC_REQUEST, MAELYS_JSONRPC_NOTIFICATION,
     MAELYS_JSONRPC_RESPONSE, MAELYS_JSONRPC_ERROR, MAELYS_JSONRPC_INVALID
 } maelys_jsonrpc_kind_t;
+typedef enum maelys_jsonrpc_dialect {
+    MAELYS_JSONRPC_DIALECT_STRICT = 0,
+    MAELYS_JSONRPC_DIALECT_CODEX = 1
+} maelys_jsonrpc_dialect_t;
 typedef struct maelys_jsonrpc_limits {
     size_t max_method_length; /* zero selects 256 */
     size_t max_error_excerpt; /* caller excerpt policy: zero selects 512; pass cap accordingly */
+    maelys_jsonrpc_dialect_t dialect; /* zero/NULL: STRICT; CODEX permits an absent jsonrpc */
 } maelys_jsonrpc_limits_t;
 typedef struct maelys_jsonrpc_message {
     maelys_jsonrpc_kind_t kind;
@@ -22,6 +27,8 @@ typedef struct maelys_jsonrpc_message {
     maelys_json_value_t params, result, error;
 } maelys_jsonrpc_message_t;
 /* No allocation. A malformed envelope returns PROTOCOL with kind INVALID.
+ * STRICT requires jsonrpc:"2.0". CODEX tolerates only its absence; a present
+ * member must still be the string "2.0". Unknown dialects return ARGUMENT.
  * IDs are string, null, or an integer lexeme (no fraction/exponent); a lexeme
  * outside int64 still classifies, but cannot settle our integer-emitter calls.
  * Params, when present, must be an object or array. Extra members are allowed.

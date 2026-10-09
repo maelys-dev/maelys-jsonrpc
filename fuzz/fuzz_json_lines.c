@@ -22,9 +22,16 @@ static summary_t run(const unsigned char *data, size_t size, size_t chunk) {
             if (r == MAELYS_JSONRPC_AGAIN) break;
             if (r == MAELYS_JSONRPC_OK) {
                 maelys_jsonrpc_message_t message;
-                (void)maelys_jsonrpc_classify(doc, NULL, &message);
+                maelys_jsonrpc_result_t strict = maelys_jsonrpc_classify(doc, NULL, &message);
+                for (int dialect = 0; dialect < 2; ++dialect) {
+                    maelys_jsonrpc_limits_t limits = {.dialect = (maelys_jsonrpc_dialect_t)dialect};
+                    maelys_jsonrpc_message_t classified;
+                    maelys_jsonrpc_result_t result = maelys_jsonrpc_classify(doc, &limits, &classified);
+                    if (!dialect && (strict != result || message.kind != classified.kind)) abort();
+                    out.hash = out.hash * 131u + (uint64_t)result;
+                    out.hash = out.hash * 131u + (uint64_t)classified.kind;
+                }
                 ++out.documents;
-                out.hash = out.hash * 131u + (uint64_t)message.kind;
                 maelys_json_writer_t *writer = NULL; char *bytes = NULL; size_t length = 0u;
                 if (maelys_json_writer_create(MAELYS_JSON_PROFILE_RFC8259, &options.limits, 0u, &writer) == MAELYS_JSON_OK &&
                     maelys_json_writer_value(writer, doc, maelys_json_document_root(doc)) == MAELYS_JSON_OK &&
@@ -57,6 +64,8 @@ int LLVMFuzzerTestOneInput(const unsigned char *data, size_t size) {
     if (a.hash != b.hash || a.documents != b.documents || a.errors != b.errors ||
         a.stats.bytes_seen != b.stats.bytes_seen || a.stats.lines_seen != b.stats.lines_seen ||
         a.stats.preamble_lines != b.stats.preamble_lines || a.stats.blank_lines != b.stats.blank_lines ||
-        a.stats.line_overflows != b.stats.line_overflows || a.stats.rejected_lines != b.stats.rejected_lines) abort();
+        a.stats.line_overflows != b.stats.line_overflows || a.stats.rejected_lines != b.stats.rejected_lines ||
+        a.stats.missing_version != b.stats.missing_version || a.stats.documents != b.stats.documents ||
+        a.stats.stream_started != b.stats.stream_started) abort();
     return 0;
 }

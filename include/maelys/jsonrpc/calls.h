@@ -23,9 +23,14 @@ maelys_jsonrpc_result_t maelys_jsonrpc_calls_create(size_t max_pending, maelys_j
  * UINT64_MAX is a valid deadline, not a no-timeout sentinel. */
 maelys_jsonrpc_result_t maelys_jsonrpc_calls_open(maelys_jsonrpc_calls_t *, const char *method,
     uint64_t now_ms, uint64_t deadline_ms, void *userdata, int64_t *out_id);
-/* No allocation. Only a classified RESPONSE/ERROR from this document can
- * settle; invalid kind/handle is ARGUMENT. Unknown/string/null/out-of-range
- * IDs or duplicate responses return UNKNOWN_ID, without changing out. */
+/* No allocation. Caller supplies a RESPONSE/ERROR already classified from
+ * this document with its chosen dialect. No reclassification: only kind, the
+ * integer ID and table membership are checked. Invalid kind is ARGUMENT;
+ * unknown/string/null/out-of-range IDs or duplicate responses are UNKNOWN_ID.
+ * Failures do not change out. Replies to incoming requests use begin_response
+ * to copy the received integer/string/null ID, independently of this table.
+ * Clients previously emitting string IDs must use open's integer IDs instead;
+ * compatibility with Codex 0.161 belongs to the harness integration tests. */
 maelys_jsonrpc_result_t maelys_jsonrpc_calls_settle(maelys_jsonrpc_calls_t *,
     const maelys_json_document_t *, const maelys_jsonrpc_message_t *, maelys_jsonrpc_call_t *out);
 /* Earliest deadline first, then lowest ID for equal deadlines. AGAIN when

@@ -15,6 +15,7 @@ parser.add_argument("--corpus", type=pathlib.Path, required=True)
 parser.add_argument("--report", type=pathlib.Path, required=True)
 args = parser.parse_args()
 results, exceptions, failures = [], [], []
+classification = {}
 verified_streams = 0
 spec = importlib.util.spec_from_file_location("capture", pathlib.Path(__file__).with_name("capture-corpus.py"))
 capture = importlib.util.module_from_spec(spec)
@@ -24,6 +25,8 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
     manifest = json.loads(manifest_path.read_text())
     for entry in manifest["streams"]:
         path = manifest_path.parent / entry["path"]
+        if entry["source"] != manifest_path.parent.name:
+            raise SystemExit("corpus protocol directory/provenance mismatch")
         blob = path.read_bytes()
         capture.admit(blob)
         if (path.resolve().parent != manifest_path.parent.resolve() or
@@ -31,9 +34,29 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
             len(blob) != entry["bytes"] or blob.count(b"\n") != entry["lines"] or
             entry["anonymized"] is not False or not entry["tool"] or not entry["captured_at"]):
             raise SystemExit("corpus integrity/provenance mismatch")
-        subprocess.run([str(args.reader.resolve()), str(path), entry["source"]], check=True)
+        reader = subprocess.run([str(args.reader.resolve()), str(path), entry["source"]],
+                                capture_output=True, check=True)
+        measured = json.loads(reader.stdout)
+        profile = "codex" if entry["source"] == "codex-app-server" else "strict"
+        summary = classification.setdefault(entry["source"], {
+            "streams": 0, "documents": 0, "missing_version": 0,
+            "correlation": {"settled": 0, "unknown_zero": 0, "invalid_argument": 0},
+            "classified_strict": {"accepted": 0, "invalid": 0},
+            "classified_codex": {"accepted": 0, "invalid": 0}})
+        summary["streams"] += 1
+        for field in ("documents", "missing_version"):
+            summary[field] += measured[field]
+        for field in ("settled", "unknown_zero", "invalid_argument"):
+            summary["correlation"][field] += measured["correlation"][field]
+        for dialect in ("strict", "codex"):
+            for field in ("accepted", "invalid"):
+                summary["classified_" + dialect][field] += measured["classified_" + dialect][field]
+        if measured["classified_" + profile]["invalid"]:
+            failures.append({"path": str(path), "reason": "INVALID_PROTOCOL_CLASSIFICATION"})
+        if entry["source"] != "codex-app-server" and measured["classified_strict"] != measured["classified_codex"]:
+            failures.append({"path": str(path), "reason": "PROFILE_DIVERGENCE"})
         verified_streams += 1
-        run = subprocess.run([str(args.executable.resolve()), str(path)], capture_output=True, check=True)
+        run = subprocess.run([str(args.executable.resolve()), str(path), entry["source"]], capture_output=True, check=True)
         for line in run.stdout.splitlines():
             observation = json.loads(line)
             record = {"path": str(path), "source": entry["source"], **observation}
@@ -43,6 +66,8 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
                 reason = reasons.get(observation["why"], "UNEXPECTED")
                 exceptions.append({**record, "reason": reason})
                 if reason == "UNEXPECTED": failures.append(record)
+            elif not observation["classification_equal"]:
+                failures.append({**record, "reason": "CLASSIFICATION_DIFFERENTIAL"})
             elif observation[legacy] and not observation["equal_" + legacy]:
                 failures.append(record)
             elif observation["writer"] != 0:
@@ -52,9 +77,9 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
 
 args.report.parent.mkdir(parents=True, exist_ok=True)
 args.report.write_text(json.dumps({"lines": len(results), "streams": len({r['path'] for r in results}),
-    "exceptions": exceptions, "failures": failures,
+    "exceptions": exceptions, "failures": failures, "classification": classification,
     "corpus_present": bool(results), "verified_streams": verified_streams,
-    "chunk_invariance": "byte_for_byte_documents_order_errors_stats_and_finish"}, indent=2, sort_keys=True) + "\n")
+    "chunk_invariance": "byte_for_byte_documents_order_errors_stats_classification_and_finish"}, indent=2, sort_keys=True) + "\n")
 print(f"differential: {len(results)} lines, {len(exceptions)} named exceptions, {len(failures)} failures")
 if failures or not results:
     raise SystemExit(1)

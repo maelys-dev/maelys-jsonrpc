@@ -160,7 +160,15 @@ maelys_jsonrpc_result_t maelys_jsonrpc_reader_next(maelys_jsonrpc_reader_t *read
         maelys_jsonrpc_result_t r = maelys_jsonrpc_parse(line->bytes, line->size,
             &reader->options.limits, out, why);
         free(line);
-        if (r == MAELYS_JSONRPC_OK) add(&reader->stats.documents, 1u);
+        if (r == MAELYS_JSONRPC_OK) {
+            add(&reader->stats.documents, 1u);
+            maelys_json_value_t root = maelys_json_document_root(*out);
+            maelys_json_value_t marker = MAELYS_JSON_VALUE_NONE;
+            if (maelys_json_value_type(*out, root) == MAELYS_JSON_TYPE_OBJECT) {
+                (void)maelys_json_object_get(*out, root, "jsonrpc", &marker);
+                if (marker == MAELYS_JSON_VALUE_NONE) add(&reader->stats.missing_version, 1u);
+            }
+        }
         else add(&reader->stats.rejected_lines, 1u);
         return r;
     }

@@ -13,4 +13,5 @@
 void test_reader(void);
 void test_message(void);
 void test_calls(void);
+void test_dialect(void);
 #endif

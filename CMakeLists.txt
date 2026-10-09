@@ -49,7 +49,7 @@ target_compile_options(maelys_jsonrpc PRIVATE -Wall -Wextra -Wpedantic -Wshadow
 set_target_properties(maelys_jsonrpc PROPERTIES OUTPUT_NAME maelys-jsonrpc EXPORT_NAME jsonrpc VERSION ${PROJECT_VERSION})
 if(MAELYS_JSONRPC_BUILD_TESTS)
     enable_testing()
-    add_executable(maelys_jsonrpc_tests tests/main.c tests/test_reader.c tests/test_message.c tests/test_calls.c)
+    add_executable(maelys_jsonrpc_tests tests/main.c tests/test_reader.c tests/test_message.c tests/test_calls.c tests/test_dialect.c)
     target_link_libraries(maelys_jsonrpc_tests PRIVATE maelys::jsonrpc)
     add_test(NAME maelys_jsonrpc COMMAND maelys_jsonrpc_tests)
 endif()

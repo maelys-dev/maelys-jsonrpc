@@ -23,6 +23,7 @@ typedef struct maelys_jsonrpc_reader_stats {
     uint64_t rejected_lines;
     uint64_t documents;
     unsigned stream_started;
+    uint64_t missing_version; /* accepted object documents without jsonrpc, independent of dialect */
 } maelys_jsonrpc_reader_stats_t;
 maelys_jsonrpc_result_t maelys_jsonrpc_reader_create(
     const maelys_jsonrpc_reader_options_t *, maelys_jsonrpc_reader_t **);
@@ -42,7 +43,9 @@ maelys_jsonrpc_result_t maelys_jsonrpc_reader_next(
  * lines can still be pulled after finish. A dropped line without LF is orphaned. */
 maelys_jsonrpc_result_t maelys_jsonrpc_reader_finish(const maelys_jsonrpc_reader_t *);
 /* Counters saturate at UINT64_MAX. Byte/line/overflow/blank counters advance at
- * feed, document/rejection/preamble counters at next. No allocation. */
+ * feed, document/rejection/preamble/missing_version counters at next.
+ * missing_version also counts objects with invalid envelopes, such as {}.
+ * Rejected JSON, arrays/scalars, blanks and preambles do not count. No allocation. */
 void maelys_jsonrpc_reader_stats(const maelys_jsonrpc_reader_t *, maelys_jsonrpc_reader_stats_t *);
 void maelys_jsonrpc_reader_release(maelys_jsonrpc_reader_t **);
 /* JSON validation only, no line splitting or message classification; RFC 8259

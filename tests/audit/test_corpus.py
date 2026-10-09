@@ -34,6 +34,20 @@ class AuditTests(unittest.TestCase):
         self.assertFalse(result["mcp_accepted"])
         self.assertEqual(result["parse"], "DUPLICATE_KEY")
 
+    def test_classification_profiles(self):
+        for data, expected in ((b'{"id":1,"result":{}}', "RESPONSE"),
+                               (b'{"method":"echo"}', "NOTIFICATION")):
+            result = self.probe(data)
+            self.assertEqual(result["classified_strict"], "INVALID")
+            self.assertEqual(result["classified_codex"], expected)
+            self.assertTrue(result["missing_version"])
+            self.assertTrue(result["classification_equal_codex"])
+        for version in (b'"1.0"', b'null', b'2'):
+            result = self.probe(b'{"jsonrpc":' + version + b',"id":1,"result":{}}')
+            self.assertEqual(result["classified_strict"], "INVALID")
+            self.assertEqual(result["classified_codex"], "INVALID")
+            self.assertFalse(result["missing_version"])
+
     def test_float_relay_preserves_content(self):
         result = self.probe(b'{"jsonrpc":"2.0","id":1,"result":{"z":1.5e3}}')
         self.assertEqual(result["parse"], "OK")
