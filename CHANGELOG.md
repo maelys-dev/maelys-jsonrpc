@@ -18,6 +18,10 @@
 - Harness (app-server client) and cx (WebSocket daemon) consume the CODEX dialect.
 - Calls API and integer ID rules are unchanged. Classification decides the
   dialect once; settle checks only response/error kind, integer ID and membership.
+- Corpus responses with ID 0 come from a capture client not built on calls.
+  A calls client cannot emit them: IDs start at 1. UNKNOWN_ID means the table
+  never emitted that ID, not special treatment of zero. Replay uses one table
+  per stream, counts duplicate responses, cancels leftovers and loses no entries.
 - Content-Length still has no named live consumer and remains excluded.
 
 ## 0.1.0 — 2026-10-08

@@ -48,6 +48,11 @@ calls. Clients emitting string IDs switch to integers returned by `calls_open`;
 Codex 0.161 interoperability is verified by the harness.
 Calls return an owned inline method copy and unchanged borrowed userdata.
 Drain with `calls_cancel` before release; release reports the number lost.
+The corpus capture client did not use calls: its responses with ID 0 cannot be
+produced by a calls client, whose IDs start at 1. The corpus replay reserves
+1..max ID in one table per stream, counts repeated responses as UNKNOWN_ID,
+and cancels all remaining entries before verifying that release reports zero.
+Zero is unknown because this table never emitted it, not a special protocol ID.
 
 Raw corpus manifests record source, tool, date, exact descriptor bytes and SHA256.
 Admission rejects personal paths and credential patterns before writing.

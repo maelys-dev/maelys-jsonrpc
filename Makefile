@@ -74,6 +74,7 @@ $(PC): pkgconfig/maelys-jsonrpc.pc.in VERSION
 test: $(TEST) $(DIFF) $(CORPUS_READER)
 	$(TEST)
 	$(PYTHON) tests/test_capture.py
+	$(PYTHON) tests/test_corpus_reader.py --reader $(CORPUS_READER)
 	$(PYTHON) tools/run-differential.py --executable $(DIFF) --reader $(CORPUS_READER) --corpus tests/corpus --report $(BUILD)/differential.json
 
 check:

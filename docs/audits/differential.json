@@ -11,7 +11,11 @@
         "invalid": 394
       },
       "correlation": {
+        "cancelled": 131,
+        "duplicate_responses": 0,
         "invalid_argument": 132,
+        "opened": 262,
+        "release_lost": 0,
         "settled": 131,
         "unknown_zero": 1
       },
@@ -29,7 +33,11 @@
         "invalid": 0
       },
       "correlation": {
+        "cancelled": 0,
+        "duplicate_responses": 0,
         "invalid_argument": 0,
+        "opened": 0,
+        "release_lost": 0,
         "settled": 0,
         "unknown_zero": 0
       },
@@ -47,7 +55,11 @@
         "invalid": 0
       },
       "correlation": {
+        "cancelled": 0,
+        "duplicate_responses": 0,
         "invalid_argument": 0,
+        "opened": 0,
+        "release_lost": 0,
         "settled": 0,
         "unknown_zero": 0
       },
@@ -57,6 +69,15 @@
     }
   },
   "corpus_present": true,
+  "correlation_policy": {
+    "calls_client_can_emit_zero": false,
+    "duplicate_responses": "UNKNOWN_ID_after_first_settlement",
+    "open_sequence": "1..maximum_integer_id_in_stream",
+    "shutdown": "cancel_until_AGAIN_then_release_returns_zero",
+    "table_scope": "one_per_descriptor_stream",
+    "zero_id_origin": "capture_client_not_built_on_calls",
+    "zero_id_reason": "never_emitted_by_this_table_not_a_special_id"
+  },
   "exceptions": [
     {
       "classification_equal": 1,

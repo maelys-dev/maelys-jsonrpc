@@ -40,13 +40,14 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
         profile = "codex" if entry["source"] == "codex-app-server" else "strict"
         summary = classification.setdefault(entry["source"], {
             "streams": 0, "documents": 0, "missing_version": 0,
-            "correlation": {"settled": 0, "unknown_zero": 0, "invalid_argument": 0},
+            "correlation": {field: 0 for field in ("opened", "settled", "duplicate_responses",
+                "unknown_zero", "invalid_argument", "cancelled", "release_lost")},
             "classified_strict": {"accepted": 0, "invalid": 0},
             "classified_codex": {"accepted": 0, "invalid": 0}})
         summary["streams"] += 1
         for field in ("documents", "missing_version"):
             summary[field] += measured[field]
-        for field in ("settled", "unknown_zero", "invalid_argument"):
+        for field in summary["correlation"]:
             summary["correlation"][field] += measured["correlation"][field]
         for dialect in ("strict", "codex"):
             for field in ("accepted", "invalid"):
@@ -78,6 +79,14 @@ for manifest_path in sorted(args.corpus.glob("*/MANIFEST.json")):
 args.report.parent.mkdir(parents=True, exist_ok=True)
 args.report.write_text(json.dumps({"lines": len(results), "streams": len({r['path'] for r in results}),
     "exceptions": exceptions, "failures": failures, "classification": classification,
+    "correlation_policy": {
+        "table_scope": "one_per_descriptor_stream",
+        "open_sequence": "1..maximum_integer_id_in_stream",
+        "duplicate_responses": "UNKNOWN_ID_after_first_settlement",
+        "zero_id_origin": "capture_client_not_built_on_calls",
+        "zero_id_reason": "never_emitted_by_this_table_not_a_special_id",
+        "calls_client_can_emit_zero": False,
+        "shutdown": "cancel_until_AGAIN_then_release_returns_zero"},
     "corpus_present": bool(results), "verified_streams": verified_streams,
     "chunk_invariance": "byte_for_byte_documents_order_errors_stats_classification_and_finish"}, indent=2, sort_keys=True) + "\n")
 print(f"differential: {len(results)} lines, {len(exceptions)} named exceptions, {len(failures)} failures")
