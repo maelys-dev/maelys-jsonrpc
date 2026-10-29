@@ -2,10 +2,10 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 if(NOT TARGET maelys::json)
-    find_package(maelys-json 0.3 CONFIG QUIET)
+    find_package(maelys-json 0.4 CONFIG QUIET)
     if(NOT TARGET maelys::json)
         find_dependency(PkgConfig)
-        pkg_check_modules(MAELYS_JSON REQUIRED IMPORTED_TARGET maelys-json>=0.3.0)
+        pkg_check_modules(MAELYS_JSON REQUIRED IMPORTED_TARGET maelys-json>=0.4.0)
         add_library(maelys::json ALIAS PkgConfig::MAELYS_JSON)
     endif()
 endif()

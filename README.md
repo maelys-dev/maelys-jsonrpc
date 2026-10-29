@@ -29,9 +29,13 @@ make asan-ubsan MAELYS_JSON_DIR=/path/to/maelys-json
 make fuzz-smoke FUZZ_TIME=30 MAELYS_JSON_DIR=/path/to/maelys-json
 ```
 
-The dependency pin is maelys-json v0.3.0 (ABI 3). jansson is required only for the
-legacy-reader differential tests. CMake exports `maelys::jsonrpc`;
-pkg-config reports `maelys-jsonrpc` with `Requires: maelys-json >= 0.3.0`.
+The dependency pin is maelys-json v0.4.0 (ABI 4); the JSON-RPC ABI remains 2.
+Every reader path is strict. Classification also refuses a document whose
+source repeated a key, even when a caller parsed it with the tolerant
+`MAELYS_JSON_PROFILE_RFC8259_LAST_WINS` profile and passes it in directly.
+jansson is required only for the legacy-reader differential tests. CMake
+exports `maelys::jsonrpc`; pkg-config reports `maelys-jsonrpc` with
+`Requires: maelys-json >= 0.4.0`.
 
 Readers transfer documents to the caller, who releases them with
 `maelys_json_document_release`. Message strings and handles borrow that document.

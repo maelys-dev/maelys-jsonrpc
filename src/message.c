@@ -66,6 +66,9 @@ maelys_jsonrpc_result_t maelys_jsonrpc_classify(const maelys_json_document_t *do
     maelys_jsonrpc_dialect_t dialect = limits ? limits->dialect : MAELYS_JSONRPC_DIALECT_STRICT;
     if (dialect != MAELYS_JSONRPC_DIALECT_STRICT && dialect != MAELYS_JSONRPC_DIALECT_CODEX)
         return MAELYS_JSONRPC_ARGUMENT;
+    size_t duplicates = 0u;
+    if (maelys_json_document_duplicate_count(doc, &duplicates) != MAELYS_JSON_OK || duplicates)
+        return MAELYS_JSONRPC_PROTOCOL;
     maelys_json_value_t root = maelys_json_document_root(doc);
     if (maelys_json_value_type(doc, root) != MAELYS_JSON_TYPE_OBJECT)
         return MAELYS_JSONRPC_PROTOCOL;

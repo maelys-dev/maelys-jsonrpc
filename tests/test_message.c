@@ -138,8 +138,32 @@ static void relay_case(void) {
     maelys_json_writer_release(writer); maelys_json_document_release(doc);
 }
 
+static void duplicate_provenance(void) {
+    const char *lines[] = {
+        "{\"jsonrpc\":\"2.0\",\"id\":1,\"id\":2,\"result\":null}",
+        "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"a\":0,\"a\":1}}",
+        "{\"method\":\"x\",\"params\":{\"a\":0,\"a\":1}}"
+    };
+    for (size_t i = 0u; i < sizeof(lines) / sizeof(lines[0]); ++i) {
+        maelys_json_document_t *doc = NULL;
+        maelys_json_error_t why;
+        CHECK(maelys_jsonrpc_parse(lines[i], strlen(lines[i]), NULL, &doc, &why) == MAELYS_JSONRPC_PROTOCOL);
+        CHECK(why.code == MAELYS_JSON_ERR_DUPLICATE_KEY);
+        J(maelys_json_document_parse(lines[i], strlen(lines[i]),
+            MAELYS_JSON_PROFILE_RFC8259_LAST_WINS, NULL, &doc, NULL));
+        for (int dialect = 0; dialect <= 1; ++dialect) {
+            maelys_jsonrpc_limits_t limits = {0};
+            limits.dialect = (maelys_jsonrpc_dialect_t)dialect;
+            maelys_jsonrpc_message_t message;
+            CHECK(maelys_jsonrpc_classify(doc, &limits, &message) == MAELYS_JSONRPC_PROTOCOL);
+            CHECK(message.kind == MAELYS_JSONRPC_INVALID);
+        }
+        maelys_json_document_release(doc);
+    }
+}
+
 void test_message(void) {
-    classify_cases(); writer_cases(); relay_case();
+    duplicate_provenance(); classify_cases(); writer_cases(); relay_case();
     maelys_json_document_t *doc = parse("{\"code\":-2,\"message\":\"ééerror\"}");
     int64_t code = 0; char excerpt[4];
     R(maelys_jsonrpc_error_read(doc, maelys_json_document_root(doc), &code, excerpt, sizeof excerpt));

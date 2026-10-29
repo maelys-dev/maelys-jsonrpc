@@ -3,12 +3,12 @@
 #define MAELYS_JSONRPC_RESULT_H
 #include <maelys/json.h>
 #ifdef __cplusplus
-static_assert(MAELYS_JSON_VERSION_MAJOR == 0 && MAELYS_JSON_VERSION_MINOR == 3 && MAELYS_JSON_ABI_VERSION == 3u,
-    "maelys-jsonrpc requires maelys-json 0.3.x (ABI 3)");
+static_assert(MAELYS_JSON_VERSION_MAJOR == 0 && MAELYS_JSON_ABI_VERSION == 4u,
+    "maelys-jsonrpc requires maelys-json with duplicate provenance (ABI 4)");
 extern "C" {
 #else
-_Static_assert(MAELYS_JSON_VERSION_MAJOR == 0 && MAELYS_JSON_VERSION_MINOR == 3 && MAELYS_JSON_ABI_VERSION == 3u,
-    "maelys-jsonrpc requires maelys-json 0.3.x (ABI 3)");
+_Static_assert(MAELYS_JSON_VERSION_MAJOR == 0 && MAELYS_JSON_ABI_VERSION == 4u,
+    "maelys-jsonrpc requires maelys-json with duplicate provenance (ABI 4)");
 #endif
 typedef enum maelys_jsonrpc_result {
     MAELYS_JSONRPC_OK = 0,

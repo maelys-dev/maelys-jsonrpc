@@ -2,7 +2,7 @@
 
 Before each cut, verify the declared
 corpus scenarios, run `make check`, sanitizers, the three target checks and
-one hour locally for each fuzzer. Scenario 8 must pass with maelys-json 0.3.0 (ABI 3):
+one hour locally for each fuzzer. Scenario 8 must pass with maelys-json 0.4.0 (ABI 4):
 exact lexeme relay, a byte fixed point, and is_canonical false for fractions. A cut or push requires David's instruction.
 API 1.0.0 additionally requires two published consumers: harness and cx.
 
