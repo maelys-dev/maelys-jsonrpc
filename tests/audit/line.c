@@ -7,8 +7,8 @@
 #include <string.h>
 
 _Static_assert(MAELYS_JSON_VERSION_MAJOR == 0 &&
-    MAELYS_JSON_VERSION_MINOR == 3 && MAELYS_JSON_VERSION_PATCH == 0 && MAELYS_JSON_ABI_VERSION == 3u,
-    "audit requires maelys-json v0.3.0");
+    MAELYS_JSON_VERSION_MINOR == 4 && MAELYS_JSON_VERSION_PATCH == 0 && MAELYS_JSON_ABI_VERSION == 4u,
+    "audit requires maelys-json v0.4.0");
 
 static const maelys_json_limits_t limits = {1048576u, 64u, 65536u};
 

@@ -7,6 +7,6 @@ includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
 Name: maelys-jsonrpc
 Description: Bounded JSON-RPC 2.0 framing, messages and correlation
 Version: @PROJECT_VERSION@
-Requires: maelys-json >= 0.3.0
+Requires: maelys-json >= 0.4.0
 Libs: -L${libdir} -lmaelys-jsonrpc
 Cflags: -I${includedir}

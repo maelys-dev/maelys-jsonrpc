@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   check:
-    uses: maelys-dev/maelys-release/.github/workflows/check-product.yml@8623b3cb8bc432111275170b81eedb63635747d2 # v0.63.0
+    uses: maelys-dev/maelys-release/.github/workflows/check-product.yml@c411025b7d9131e693ed5c683b104d3204178e77 # v0.65.1
     with:
       product: maelys-jsonrpc
       fuzz_command: make fuzz-smoke FUZZ_TIME=30

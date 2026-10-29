@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.3.0 — 2026-10-29
+
+- Require maelys-json 0.4.0 (interface generation 4): the pin moves to
+  v0.4.0, `result.h` asserts ABI 4 instead of exactly 0.3 and ABI 3, and
+  pkg-config and CMake require `maelys-json >= 0.4.0`. The JSON-RPC ABI
+  stays 2.
+- Keep every reader path strict. `maelys_jsonrpc_classify` also refuses,
+  with PROTOCOL and kind INVALID, a document whose source repeated a key,
+  read through `maelys_json_document_duplicate_count`, even when a caller
+  parsed it with the tolerant `RFC8259_LAST_WINS` profile and passes it in
+  directly.
+- Adopt maelys-release v0.65.1 (from v0.63.0); the checkout scripts move
+  with it, as socle 0.64.0 asks.
+- Update the executable audit probes to the pinned maelys-json v0.4.0;
+  historical stage-0 reports retain their recorded dependency version.
+
+### Decisions
+
+- Duplicate provenance is rejected at classification in both dialects;
+  tolerant parsing never makes a duplicate-bearing document a valid message.
+- The JSON-RPC ABI remains 2; the required JSON interface generation is 4.
+
 ## 0.2.0 — 2026-10-09
 
 - Add the CODEX read dialect for envelopes without a jsonrpc member; STRICT

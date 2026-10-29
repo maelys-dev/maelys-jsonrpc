@@ -27,6 +27,8 @@ typedef struct maelys_jsonrpc_message {
     maelys_json_value_t params, result, error;
 } maelys_jsonrpc_message_t;
 /* No allocation. A malformed envelope returns PROTOCOL with kind INVALID.
+ * A source with duplicate keys anywhere is also refused, even if the caller
+ * supplies a document parsed with the tolerant JSON profile.
  * STRICT requires jsonrpc:"2.0". CODEX tolerates only its absence; a present
  * member must still be the string "2.0". Unknown dialects return ARGUMENT.
  * IDs are string, null, or an integer lexeme (no fraction/exponent); a lexeme
